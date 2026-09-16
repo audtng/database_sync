@@ -1,0 +1,18 @@
+[
+  {
+    "ghsa_id": "GHSA-f8qv-7x5w-qr48",
+    "summary": "free5GC NRF: type-confusion panic in POST /oauth2/token structured-form parser via Reflect.Set on incompatible types",
+    "severity": "high",
+    "diff": ""
+  },
+  {
+    "ghsa_id": "GHSA-fqw6-gf59-qr4w",
+    "summary": "containerd user ID handling bypass allows runAsNonRoot evasion",
+    "severity": "high",
+    "diff": ""
+  },
+  {
+    "ghsa_id": "GHSA-fqw6-gf59-qr4w",
+    "updated_at": "2026-07-21T14:40:35Z"
+  }
+]

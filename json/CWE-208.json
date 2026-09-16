@@ -1,0 +1,24 @@
+[
+  {
+    "ghsa_id": "GHSA-9h64-2846-7x7f",
+    "summary": "Axonflow fixed bugs by implementing multi-tenant isolation and access-control hardening",
+    "severity": "critical",
+    "diff": ""
+  },
+  {
+    "ghsa_id": "GHSA-jxqv-jcvh-7gr4",
+    "summary": "Atlantis Events vulnerable to Timing Attack",
+    "severity": "high",
+    "diff": "diff --git a/server/controllers/events/gitlab_request_parser_validator.go b/server/controllers/events/gitlab_request_parser_validator.go\nindex 9755bd5d9e..b92fd4df81 100644\n--- a/server/controllers/events/gitlab_request_parser_validator.go\n+++ b/server/controllers/events/gitlab_request_parser_validator.go\n@@ -14,6 +14,7 @@\n package events\n \n import (\n+\t\"crypto/subtle\"\n \t\"encoding/json\"\n \t\"fmt\"\n \t\"io\"\n@@ -61,8 +62,7 @@ func (d *DefaultGitlabRequestParserValidator) ParseAndValidate(r *http.Request,\n \n \t// Validate secret if specified.\n \theaderSecret := r.Header.Get(secretHeader)\n-\tsecretStr := string(secret)\n-\tif len(secret) != 0 && headerSecret != secretStr {\n+\tif len(secret) != 0 && subtle.ConstantTimeCompare(secret, []byte(headerSecret)) != 1 {\n \t\treturn nil, fmt.Errorf(\"header %s=%s did not match expected secret\", secretHeader, headerSecret)\n \t}\n \n"
+  },
+  {
+    "ghsa_id": "GHSA-pjv4-3c63-699f",
+    "summary": "opentelemetry-collector-contrib's azureauthextension Authenticate method does not validate bearer tokens, allowing auth bypass via replay",
+    "severity": "high",
+    "diff": ""
+  },
+  {
+    "ghsa_id": "GHSA-pjv4-3c63-699f",
+    "updated_at": "2026-05-14T20:42:41Z"
+  }
+]
