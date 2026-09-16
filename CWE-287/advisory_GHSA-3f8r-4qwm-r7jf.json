@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3f8r-4qwm-r7jf",
+  "summary": "Improper Authentication in Apache Traffic Control",
+  "severity": "critical",
+  "diff": "diff --git a/traffic_ops/traffic_ops_golang/login/login.go b/traffic_ops/traffic_ops_golang/login/login.go\nindex 07575f70c5..b873ef109b 100644\n--- a/traffic_ops/traffic_ops_golang/login/login.go\n+++ b/traffic_ops/traffic_ops_golang/login/login.go\n@@ -51,6 +51,10 @@ func LoginHandler(db *sqlx.DB, cfg config.Config) http.HandlerFunc {\n \t\t\thandleErrs(http.StatusBadRequest, err)\n \t\t\treturn\n \t\t}\n+\t\tif form.Username == \"\" || form.Password == \"\" {\n+\t\t\tapi.HandleErr(w, r, nil, http.StatusBadRequest, errors.New(\"username and password are required\"), nil)\n+\t\t\treturn\n+\t\t}\n \t\tresp := struct {\n \t\t\ttc.Alerts\n \t\t}{}\n"
+}

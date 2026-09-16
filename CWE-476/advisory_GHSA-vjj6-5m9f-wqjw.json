@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vjj6-5m9f-wqjw",
+  "summary": "NULL Pointer Dereference in HyperLedger Fabric",
+  "severity": "high",
+  "diff": ""
+}

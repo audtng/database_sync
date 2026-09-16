@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2rmp-fw5r-j5qv",
+  "summary": "Improper Authentication in InfluxDB",
+  "severity": "critical",
+  "diff": ""
+}

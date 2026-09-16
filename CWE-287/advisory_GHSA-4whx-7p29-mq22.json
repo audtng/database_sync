@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4whx-7p29-mq22",
+  "summary": "TiDB authentication bypass vulnerability",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wvvq-wgcr-9q48",
+  "summary": "Traefik has a Potential mTLS Bypass via Fragmented TLS ClientHello Causing Pre-SNI Sniff Fallback to Default Non-mTLS TLS Config",
+  "severity": "high",
+  "diff": ""
+}

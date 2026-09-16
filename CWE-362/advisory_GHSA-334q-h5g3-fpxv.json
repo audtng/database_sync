@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-334q-h5g3-fpxv",
+  "summary": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+  "severity": "high",
+  "diff": ""
+}

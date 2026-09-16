@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c623-f998-8hhv",
+  "summary": "SIPGO is Vulnerable to Response DoS via Nil Pointer Dereference",
+  "severity": "high",
+  "diff": "diff --git a/sip/response.go b/sip/response.go\nindex 9a917fe3..923aa27e 100644\n--- a/sip/response.go\n+++ b/sip/response.go\n@@ -239,9 +239,10 @@ func NewResponseFromRequest(\n \tcase 100:\n \t\tCopyHeaders(\"Timestamp\", req, res)\n \tdefault:\n-\t\tif _, ok := res.To().Params[\"tag\"]; !ok {\n-\t\t\tuuid, _ := uuid.NewRandom()\n-\t\t\tres.to.Params[\"tag\"] = uuid.String()\n+\t\tif h := res.To(); h != nil {\n+\t\t\tif _, ok := h.Params[\"tag\"]; !ok {\n+\t\t\t\th.Params[\"tag\"] = uuid.NewString()\n+\t\t\t}\n \t\t}\n \t}\n \n"
+}

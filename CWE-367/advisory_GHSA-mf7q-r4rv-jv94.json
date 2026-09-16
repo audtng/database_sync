@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mf7q-r4rv-jv94",
+  "summary": "Crossplane's TOCTOU between cosign verification and image fetch in xpkg.CachedClient allows tag-based package install to bypass signature check",
+  "severity": "high",
+  "diff": ""
+}

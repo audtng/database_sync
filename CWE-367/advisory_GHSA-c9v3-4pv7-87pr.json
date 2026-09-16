@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c9v3-4pv7-87pr",
+  "summary": "CoreDNS ACL Bypass",
+  "severity": "high",
+  "diff": ""
+}

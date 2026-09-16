@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8gmg-3w2q-65f4",
+  "summary": "OpenTelemetry eBPF Instrumentation: Privileged Java agent injection allows arbitrary host file overwrite via untrusted TMPDIR",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-34vw-m4rh-r36p",
+  "summary": "Talos vulnerable dependency due to race condition in Linux kernel's IP framework XFRM",
+  "severity": "high",
+  "diff": ""
+}

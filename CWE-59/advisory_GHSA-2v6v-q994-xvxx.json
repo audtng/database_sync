@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2v6v-q994-xvxx",
+  "summary": "Privilege escalation in beego",
+  "severity": "high",
+  "diff": ""
+}

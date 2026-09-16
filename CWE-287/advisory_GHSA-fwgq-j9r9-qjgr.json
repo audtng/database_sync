@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fwgq-j9r9-qjgr",
+  "summary": "Casdoor has an authentication bypass",
+  "severity": "critical",
+  "diff": ""
+}

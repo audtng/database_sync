@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8mm6-wmpp-mmm3",
+  "summary": "Duplicate Advisory: Gogs allows argument injection during the tagging of a new release",
+  "severity": "high",
+  "diff": ""
+}

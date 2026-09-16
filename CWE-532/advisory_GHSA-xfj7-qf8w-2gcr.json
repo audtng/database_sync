@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xfj7-qf8w-2gcr",
+  "summary": "Rancher 'Audit Log' leaks sensitive information",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-25rw-g6ff-fmg8",
+  "summary": "ZITADEL: Login V2 UI Policy Bypass Allows Unauthorized Self-Registration and Authentication",
+  "severity": "high",
+  "diff": ""
+}

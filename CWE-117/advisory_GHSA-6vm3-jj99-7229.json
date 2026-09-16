@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6vm3-jj99-7229",
+  "summary": "Gin's default logger allows unsanitized input that can allow remote attackers to inject arbitrary log lines",
+  "severity": "high",
+  "diff": "diff --git a/logger.go b/logger.go\nindex d5b96b3eae..d361b74d32 100644\n--- a/logger.go\n+++ b/logger.go\n@@ -141,7 +141,7 @@ var defaultLogFormatter = func(param LogFormatterParams) string {\n \t\t// Truncate in a golang \u003c 1.8 safe way\n \t\tparam.Latency = param.Latency - param.Latency%time.Second\n \t}\n-\treturn fmt.Sprintf(\"[GIN] %v |%s %3d %s| %13v | %15s |%s %-7s %s %s\\n%s\",\n+\treturn fmt.Sprintf(\"[GIN] %v |%s %3d %s| %13v | %15s |%s %-7s %s %#v\\n%s\",\n \t\tparam.TimeStamp.Format(\"2006/01/02 - 15:04:05\"),\n \t\tstatusColor, param.StatusCode, resetColor,\n \t\tparam.Latency,\n"
+}

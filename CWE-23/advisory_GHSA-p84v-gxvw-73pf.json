@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p84v-gxvw-73pf",
+  "summary": "Argo Workflow has a Zipslip Vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/workflow/executor/executor.go b/workflow/executor/executor.go\nindex bb77dff8c3cc..8aed18ea3d51 100644\n--- a/workflow/executor/executor.go\n+++ b/workflow/executor/executor.go\n@@ -964,11 +964,18 @@ func untar(tarPath string, destPath string) error {\n \t\t\t\tcontinue\n \t\t\t}\n \t\t\ttarget := filepath.Join(dest, filepath.Clean(header.Name))\n+\t\t\tif !strings.HasPrefix(target, filepath.Clean(dest)+string(os.PathSeparator)) {\n+\t\t\t\treturn fmt.Errorf(\"illegal file path: %s\", header.Name)\n+\t\t\t}\n \t\t\tif err := os.MkdirAll(filepath.Dir(target), 0o755); err != nil \u0026\u0026 os.IsExist(err) {\n \t\t\t\treturn err\n \t\t\t}\n \t\t\tswitch header.Typeflag {\n \t\t\tcase tar.TypeSymlink:\n+\t\t\t\tlinkTarget := filepath.Join(filepath.Dir(target), header.Linkname)\n+\t\t\t\tif !strings.HasPrefix(filepath.Clean(linkTarget), filepath.Clean(dest)+string(os.PathSeparator)) {\n+\t\t\t\t\treturn fmt.Errorf(\"illegal symlink target: %s -\u003e %s\", header.Name, header.Linkname)\n+\t\t\t\t}\n \t\t\t\terr := os.Symlink(header.Linkname, target)\n \t\t\t\tif err != nil {\n \t\t\t\t\treturn err\n"
+}

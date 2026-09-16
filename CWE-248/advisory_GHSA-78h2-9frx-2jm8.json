@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-78h2-9frx-2jm8",
+  "summary": "Go JOSE Panics in JWE decryption",
+  "severity": "high",
+  "diff": ""
+}

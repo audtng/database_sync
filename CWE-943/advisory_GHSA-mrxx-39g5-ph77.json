@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mrxx-39g5-ph77",
+  "summary": "Dgraph: Pre-Auth Full Database Exfiltration via DQL Injection in Upsert Condition Field",
+  "severity": "critical",
+  "diff": ""
+}

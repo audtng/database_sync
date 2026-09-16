@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m9hq-h476-h2g8",
+  "summary": "Pyroscope Exposes Storage Secret",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5gqc-qhrj-9xw8",
+  "summary": "Oxia affected by server crash via race condition in session heartbeat handling",
+  "severity": "high",
+  "diff": ""
+}

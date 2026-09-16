@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jg74-mwgw-v6x3",
+  "summary": "Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7gfg-6934-mqq2",
+  "summary": "Improper Authenication in Pion DTLS",
+  "severity": "critical",
+  "diff": "diff --git a/conn.go b/conn.go\nindex 441db8644..bf5a88e03 100644\n--- a/conn.go\n+++ b/conn.go\n@@ -559,6 +559,10 @@ func (c *Conn) handleIncomingPacket(buf []byte) (*alert, error) {\n \t\tc.log.Trace(\"\u003c- ChangeCipherSpec\")\n \t\tc.setRemoteEpoch(c.getRemoteEpoch() + 1)\n \tcase *applicationData:\n+\t\tif h.epoch == 0 {\n+\t\t\treturn \u0026alert{alertLevelFatal, alertUnexpectedMessage}, fmt.Errorf(\"ApplicationData with epoch of 0\")\n+\t\t}\n+\n \t\tc.decrypted \u003c- content.data\n \tdefault:\n \t\treturn \u0026alert{alertLevelFatal, alertUnexpectedMessage}, fmt.Errorf(\"unhandled contentType %d\", content.contentType())\n"
+}

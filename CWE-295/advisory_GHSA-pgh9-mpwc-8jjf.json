@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pgh9-mpwc-8jjf",
+  "summary": "Harvester's SUSE Virtualization Registration Client Vulnerable to MITM and DOS",
+  "severity": "high",
+  "diff": ""
+}

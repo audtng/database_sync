@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g6vg-wj8f-48cj",
+  "summary": "Centrifugo's dynamic JWKS key cache keyed only by `kid` allows cross-issuer JWT authentication bypass",
+  "severity": "high",
+  "diff": ""
+}

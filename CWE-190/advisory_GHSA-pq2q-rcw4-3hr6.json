@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pq2q-rcw4-3hr6",
+  "summary": "NATS: Pre-auth remote server crash via WebSocket frame length overflow in wsRead",
+  "severity": "high",
+  "diff": ""
+}

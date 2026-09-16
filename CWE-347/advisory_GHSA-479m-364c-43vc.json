@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-479m-364c-43vc",
+  "summary": "validateSignature Loop Variable Capture Signature Bypass in goxmldsig",
+  "severity": "high",
+  "diff": ""
+}

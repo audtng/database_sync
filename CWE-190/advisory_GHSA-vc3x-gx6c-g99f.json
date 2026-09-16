@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vc3x-gx6c-g99f",
+  "summary": "Denial of Service in Bytom",
+  "severity": "high",
+  "diff": "diff --git a/p2p/discover/net.go b/p2p/discover/net.go\nindex a6319d890..3645860fa 100644\n--- a/p2p/discover/net.go\n+++ b/p2p/discover/net.go\n@@ -1221,7 +1221,7 @@ func (net *Network) checkTopicRegister(data *topicRegister) (*pong, error) {\n \tif hash != pongpkt.data.(*pong).TopicHash {\n \t\treturn nil, errors.New(\"topic hash mismatch\")\n \t}\n-\tif data.Idx \u003c 0 || int(data.Idx) \u003e= len(data.Topics) {\n+\tif int(data.Idx) \u003c 0 || int(data.Idx) \u003e= len(data.Topics) {\n \t\treturn nil, errors.New(\"topic index out of range\")\n \t}\n \treturn pongpkt.data.(*pong), nil\n"
+}

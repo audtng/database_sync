@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j8p6-96vp-f3r9",
+  "summary": "OpenTelemetry eBPF Instrumentation: MongoDB parser panics on malformed wire messages",
+  "severity": "high",
+  "diff": ""
+}

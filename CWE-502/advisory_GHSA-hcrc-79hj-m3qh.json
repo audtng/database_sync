@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hcrc-79hj-m3qh",
+  "summary": "Wazuh server vulnerable to remote code execution",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-43g7-cwr8-q3jh",
+  "summary": "OpenTelemetry eBPF Instrumentation: Memcached payload length overflow can crash OBI",
+  "severity": "high",
+  "diff": ""
+}

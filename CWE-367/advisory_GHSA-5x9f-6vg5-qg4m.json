@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5x9f-6vg5-qg4m",
+  "summary": "Omni has a TOCTOU race condition that allows multiple concurrent uses of a single-use SAML session token",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-79pf-vx4x-7jmm",
+  "summary": "File Browser's TUS Delete Endpoint Bypasses Delete Permission Check",
+  "severity": "critical",
+  "diff": "diff --git a/http/tus_handlers.go b/http/tus_handlers.go\nindex b659d47965e..68931f5d4f9 100644\n--- a/http/tus_handlers.go\n+++ b/http/tus_handlers.go\n@@ -240,7 +240,7 @@ func tusPatchHandler(cache UploadCache) handleFunc {\n \n func tusDeleteHandler(cache UploadCache) handleFunc {\n \treturn withUser(func(_ http.ResponseWriter, r *http.Request, d *data) (int, error) {\n-\t\tif r.URL.Path == \"/\" || !d.user.Perm.Create {\n+\t\tif r.URL.Path == \"/\" || !d.user.Perm.Delete {\n \t\t\treturn http.StatusForbidden, nil\n \t\t}\n \n"
+}

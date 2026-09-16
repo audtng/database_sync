@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j26g-95ph-2mwv",
+  "summary": "Mattermost Server: Insufficient Password-Reset Link Invalidation",
+  "severity": "high",
+  "diff": ""
+}

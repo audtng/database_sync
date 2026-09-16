@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wv8c-6mx2-xf4j",
+  "summary": "Omni: Reader-level users can retrieve imported cluster CA keys via ResourceService",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xh8x-j8h3-m5ph",
+  "summary": "Rancher Recreates Default User With Known Password Despite Deletion",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pcgw-qcv5-h8ch",
+  "summary": "Unsigned SAML LogoutRequest Acceptance in gosaml2",
+  "severity": "high",
+  "diff": ""
+}

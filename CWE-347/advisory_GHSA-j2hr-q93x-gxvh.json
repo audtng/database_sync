@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j2hr-q93x-gxvh",
+  "summary": "SSOReady has an XML Signature Bypass via differential XML parsing",
+  "severity": "critical",
+  "diff": "diff --git a/internal/saml/dsig/path.go b/internal/saml/dsig/path.go\nindex 49f595a1..b6cfd5a2 100644\n--- a/internal/saml/dsig/path.go\n+++ b/internal/saml/dsig/path.go\n@@ -82,6 +82,19 @@ func onlyPathHoistNamesInternal(p path, s stack.Stack, n uxml.Node) (uxml.Node,\n \t\t}}, true\n \t}\n \n+\t// if multiple children match the next path segment (p[1]) then refuse to find a match\n+\tvar nextSegmentMatch bool\n+\tfor _, c := range n.Element.Children {\n+\t\tif c.Element != nil \u0026\u0026 c.Element.Name.URI == p[1].URI \u0026\u0026 c.Element.Name.Local == p[1].Local {\n+\t\t\tif nextSegmentMatch {\n+\t\t\t\t// existing match; refuse to proceed\n+\t\t\t\treturn uxml.Node{}, false\n+\t\t\t}\n+\n+\t\t\tnextSegmentMatch = true\n+\t\t}\n+\t}\n+\n \tfor _, c := range n.Element.Children {\n \t\tif find, ok := onlyPathHoistNamesInternal(p[1:], s, c); ok {\n \t\t\treturn find, true\n"
+}

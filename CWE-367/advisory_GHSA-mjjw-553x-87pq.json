@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mjjw-553x-87pq",
+  "summary": "NVIDIA Container Toolkit contains a Time-of-check Time-of-Use (TOCTOU) vulnerability",
+  "severity": "critical",
+  "diff": ""
+}

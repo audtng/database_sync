@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c45c-39f6-6gw9",
+  "summary": "Rancher generated tokens not revoked after modifications made to authentication provider",
+  "severity": "high",
+  "diff": ""
+}

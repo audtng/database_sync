@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7fq5-7wr8-rjwj",
+  "summary": "OliveTin has a Concurrent Template Parsing Race Condition which Leads to Cross-Request Command Contamination",
+  "severity": "high",
+  "diff": "diff --git a/service/internal/tpl/templates.go b/service/internal/tpl/templates.go\nindex cb9978ff..e2e23d32 100644\n--- a/service/internal/tpl/templates.go\n+++ b/service/internal/tpl/templates.go\n@@ -24,6 +24,8 @@ func jsonFunc(v any) (string, error) {\n \treturn string(data), nil\n }\n \n+// Root template (funcs/options). parseTemplate clones before Parse — text/template\n+// must not receive concurrent Parse calls on the same instance.\n var tpl = template.New(\"tpl\").\n \tOption(\"missingkey=error\").\n \tFuncs(template.FuncMap{\"Json\": jsonFunc})\n@@ -179,7 +181,12 @@ func checkMissingArgumentError(err error) (bool, string) {\n }\n \n func parseTemplate(source string, data any) (string, error) {\n-\tt, err := tpl.Parse(source)\n+\tclone, err := tpl.Clone()\n+\tif err != nil {\n+\t\treturn \"\", err\n+\t}\n+\n+\tt, err := clone.Parse(source)\n \n \tif err != nil {\n \t\treturn \"\", err\n"
+}

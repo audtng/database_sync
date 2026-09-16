@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rg2x-37c3-w2rh",
+  "summary": "Docker: Race condition in docker cp allows bind mount redirection to host path",
+  "severity": "high",
+  "diff": ""
+}

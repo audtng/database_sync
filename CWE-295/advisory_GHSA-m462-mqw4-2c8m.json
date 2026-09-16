@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m462-mqw4-2c8m",
+  "summary": "Mattermost Server has X.509 Improper Certificate Validation",
+  "severity": "critical",
+  "diff": "diff --git a/api/oauth.go b/api/oauth.go\nindex 1e3dd89b8f98..4a71500c4997 100644\n--- a/api/oauth.go\n+++ b/api/oauth.go\n@@ -702,7 +702,7 @@ func GetAuthorizationCode(c *Context, service string, props map[string]string, l\n \tprops[\"hash\"] = model.HashPassword(clientId)\n \tstate := b64.StdEncoding.EncodeToString([]byte(model.MapToJson(props)))\n \n-\tredirectUri := utils.GetSiteURL() + \"/signup/\" + service + \"/complete\"\n+\tredirectUri := c.GetSiteURLHeader() + \"/signup/\" + service + \"/complete\"\n \n \tauthUrl := endpoint + \"?response_type=code\u0026client_id=\" + clientId + \"\u0026redirect_uri=\" + url.QueryEscape(redirectUri) + \"\u0026state=\" + url.QueryEscape(state)\n \ndiff --git a/app/login.go b/app/login.go\nindex e9bcf1f03e0b..160de2b7ee7b 100644\n--- a/app/login.go\n+++ b/app/login.go\n@@ -128,7 +128,7 @@ func DoLogin(w http.ResponseWriter, r *http.Request, user *model.User, deviceId\n }\n \n func GetProtocol(r *http.Request) string {\n-\tif r.Header.Get(model.HEADER_FORWARDED_PROTO) == \"https\" {\n+\tif r.Header.Get(model.HEADER_FORWARDED_PROTO) == \"https\" || r.TLS != nil {\n \t\treturn \"https\"\n \t} else {\n \t\treturn \"http\"\n"
+}

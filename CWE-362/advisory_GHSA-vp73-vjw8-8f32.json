@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vp73-vjw8-8f32",
+  "summary": "Gotenberg has a Race Condition via Multipart `downloadFrom` Handling",
+  "severity": "high",
+  "diff": ""
+}

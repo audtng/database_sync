@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r33j-c622-r6qp",
+  "summary": "Gotenberg has an unauthenticated denial of service via echo.Context pool reuse in webhook async goroutine",
+  "severity": "high",
+  "diff": ""
+}

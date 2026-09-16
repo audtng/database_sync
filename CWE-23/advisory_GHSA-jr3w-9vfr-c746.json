@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jr3w-9vfr-c746",
+  "summary": "Local Path Provisioner vulnerable to Path Traversal via parameters.pathPattern",
+  "severity": "critical",
+  "diff": ""
+}

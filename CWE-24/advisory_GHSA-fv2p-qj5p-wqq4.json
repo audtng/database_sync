@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fv2p-qj5p-wqq4",
+  "summary": "LF Edge eKuiper vulnerable to File Path Traversal leading to file replacement",
+  "severity": "high",
+  "diff": ""
+}

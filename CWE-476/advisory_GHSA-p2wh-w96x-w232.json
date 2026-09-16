@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p2wh-w96x-w232",
+  "summary": "Ollama Denial of Service (DoS) via Null Pointer Dereference",
+  "severity": "high",
+  "diff": ""
+}

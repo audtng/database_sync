@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r3w7-mfpm-c2vw",
+  "summary": "Incorrect TLS certificate auth method in Vault",
+  "severity": "high",
+  "diff": ""
+}

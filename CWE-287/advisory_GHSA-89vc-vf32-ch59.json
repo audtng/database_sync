@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-89vc-vf32-ch59",
+  "summary": "Dragonfly doesn't have authentication enabled for some Manager’s endpoints",
+  "severity": "high",
+  "diff": ""
+}

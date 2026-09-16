@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fhvp-9hcj-6m33",
+  "summary": "Oxia has an OIDC token audience validation bypass via SkipClientIDCheck",
+  "severity": "critical",
+  "diff": ""
+}

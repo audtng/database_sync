@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-75vm-6w67-gwvp",
+  "summary": "Coder's OIDC email_verified type coercion bypass enables account takeover via unverified email linking",
+  "severity": "high",
+  "diff": ""
+}

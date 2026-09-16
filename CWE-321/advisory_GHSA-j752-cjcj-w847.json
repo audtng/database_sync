@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j752-cjcj-w847",
+  "summary": "Dpanel's hard-coded JWT secret leads to remote code execution",
+  "severity": "critical",
+  "diff": ""
+}

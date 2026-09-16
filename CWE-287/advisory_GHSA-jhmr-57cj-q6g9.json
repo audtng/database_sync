@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jhmr-57cj-q6g9",
+  "summary": "Komari vulnerable to 2FA Authentication Bypass",
+  "severity": "high",
+  "diff": "diff --git a/api/login.go b/api/login.go\nindex b79d6c8b0..54c872001 100644\n--- a/api/login.go\n+++ b/api/login.go\n@@ -52,7 +52,7 @@ func Login(c *gin.Context) {\n \t\tRespondError(c, http.StatusUnauthorized, \"2FA code is required\")\n \t\treturn\n \t}\n-\tif ok, err := accounts.Verify2Fa(uuid, data.TwoFa); err != nil \u0026\u0026 ok {\n+\tif ok, err := accounts.Verify2Fa(uuid, data.TwoFa); err != nil || !ok {\n \t\tRespondError(c, http.StatusUnauthorized, \"Invalid 2FA code\")\n \t\treturn\n \t}\n"
+}

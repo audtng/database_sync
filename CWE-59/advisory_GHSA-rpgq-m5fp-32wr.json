@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rpgq-m5fp-32wr",
+  "summary": "Portainer Has an Arbitrary File Read via Git Symlink Injection in Stack Auto-Update",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c8xp-8mf3-62h9",
+  "summary": "OctoRPKI lacks contextual out-of-bounds check when validating RPKI ROA maxLength values",
+  "severity": "high",
+  "diff": ""
+}

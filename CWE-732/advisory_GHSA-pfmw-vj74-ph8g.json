@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pfmw-vj74-ph8g",
+  "summary": "HashiCorp Vault Incorrect Permission Assignment for Critical Resource",
+  "severity": "critical",
+  "diff": ""
+}

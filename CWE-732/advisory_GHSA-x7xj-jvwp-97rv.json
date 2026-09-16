@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-x7xj-jvwp-97rv",
+  "summary": "RKE2 allows privilege escalation in Windows nodes due to Insecure Access Control Lists",
+  "severity": "critical",
+  "diff": ""
+}

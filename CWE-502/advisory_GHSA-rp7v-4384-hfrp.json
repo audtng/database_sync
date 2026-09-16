@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rp7v-4384-hfrp",
+  "summary": "k8sGPT has Prompt Injection through its k8sGPT-Operator",
+  "severity": "high",
+  "diff": ""
+}

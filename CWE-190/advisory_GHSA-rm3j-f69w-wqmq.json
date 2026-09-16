@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rm3j-f69w-wqmq",
+  "summary": "golang.org/x/crypto vulnerable to infinite loop on large channel writes",
+  "severity": "critical",
+  "diff": ""
+}

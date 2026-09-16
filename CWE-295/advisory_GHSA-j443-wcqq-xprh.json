@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j443-wcqq-xprh",
+  "summary": "Terraform Provider for SendGrid: TLS Session Resumption Bypasses Certificate Authority Trust Store Modifications in Go",
+  "severity": "critical",
+  "diff": ""
+}

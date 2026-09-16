@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vm62-9jw3-c8w3",
+  "summary": "Gogs has an argument Injection in the built-in SSH server",
+  "severity": "critical",
+  "diff": ""
+}

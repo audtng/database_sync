@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-77rm-9x9h-xj3g",
+  "summary": "Withdrawn Advisory: NULL Pointer Dereference in Protocol Buffers",
+  "severity": "high",
+  "diff": ""
+}

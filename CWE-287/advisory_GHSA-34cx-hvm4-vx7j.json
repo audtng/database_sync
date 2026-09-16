@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-34cx-hvm4-vx7j",
+  "summary": "Mattermost Server password reset email requests can be sent to attacker-provided email addresses",
+  "severity": "critical",
+  "diff": "diff --git a/app/user.go b/app/user.go\nindex 6a6050cc8ef6..03656d6d0d19 100644\n--- a/app/user.go\n+++ b/app/user.go\n@@ -1144,7 +1144,7 @@ func SendPasswordReset(email string, siteURL string) (bool, *model.AppError) {\n \t\treturn false, err\n \t}\n \n-\tif _, err := SendPasswordResetEmail(email, token, user.Locale, siteURL); err != nil {\n+\tif _, err := SendPasswordResetEmail(user.Email, token, user.Locale, siteURL); err != nil {\n \t\treturn false, model.NewLocAppError(\"SendPasswordReset\", \"api.user.send_password_reset.send.app_error\", nil, \"err=\"+err.Message)\n \t}\n \n"
+}

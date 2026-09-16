@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pg5p-wwp8-97g8",
+  "summary": "Debug mode leaks confidential data in Cilium",
+  "severity": "high",
+  "diff": ""
+}

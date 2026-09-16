@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wr8j-6chw-gm6p",
+  "summary": "free5GC's PCF npcf-smpolicycontrol POST /sm-policies panics on downstream UDR/OpenAPI 404 via nil pointer dereference",
+  "severity": "high",
+  "diff": ""
+}

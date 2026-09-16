@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p4m3-mgmm-c664",
+  "summary": "SiYuan: Path Traversal via Double URL Encoding in /assets/*path (publish mode arbitrary   file─read), Incomplete fix of CVE-2026-41894 ",
+  "severity": "high",
+  "diff": ""
+}

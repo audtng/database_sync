@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rh99-wc69-c255",
+  "summary": "Contras Affected by CopyFile Policy Subversion via Symlinks",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mqqv-chpx-vq25",
+  "summary": "goxmldsig vulnerable to crash on nil-pointer dereference caused by sending malformed XML signatures",
+  "severity": "high",
+  "diff": ""
+}

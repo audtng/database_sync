@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p3w2-64xm-833j",
+  "summary": "GoBGP has a panic in AdjRib.Update via malformed BGP Update message (Nil Pointer Dereference)",
+  "severity": "high",
+  "diff": ""
+}

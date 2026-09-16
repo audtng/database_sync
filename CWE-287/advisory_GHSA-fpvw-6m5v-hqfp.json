@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fpvw-6m5v-hqfp",
+  "summary": "Capsule Proxy Authentication bypass using an empty token",
+  "severity": "critical",
+  "diff": "diff --git a/internal/request/http.go b/internal/request/http.go\nindex ef95f055..c72bef28 100644\n--- a/internal/request/http.go\n+++ b/internal/request/http.go\n@@ -114,6 +114,10 @@ func (h http) processBearerToken() (username string, groups []string, err error)\n \t\treturn \"\", nil, fmt.Errorf(\"cannot create TokenReview\")\n \t}\n \n+\tif !tr.Status.Authenticated {\n+\t\treturn \"\", nil, fmt.Errorf(\"cannot verify the token due to error\")\n+\t}\n+\n \tif statusErr := tr.Status.Error; len(statusErr) \u003e 0 {\n \t\treturn \"\", nil, fmt.Errorf(\"cannot verify the token due to error\")\n \t}\n"
+}

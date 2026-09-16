@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-cjjc-xp8v-855w",
+  "summary": "Helm uses crypto package vulnerable to panic from malformed X.509 certificate",
+  "severity": "high",
+  "diff": ""
+}

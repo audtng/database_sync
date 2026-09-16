@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m4g2-2q66-vc9v",
+  "summary": "Vikunja Vulnerable to XSS Via Task Preview",
+  "severity": "high",
+  "diff": "diff --git a/frontend/src/components/tasks/partials/TaskGlanceTooltip.vue b/frontend/src/components/tasks/partials/TaskGlanceTooltip.vue\nindex 1b84b4e2cd..bff5a1fb7d 100644\n--- a/frontend/src/components/tasks/partials/TaskGlanceTooltip.vue\n+++ b/frontend/src/components/tasks/partials/TaskGlanceTooltip.vue\n@@ -113,10 +113,8 @@ const descriptionPreview = computed(() =\u003e {\n \t\treturn ''\n \t}\n \n-\t// Create a temporary div to extract plain text from HTML\n-\tconst tempDiv = document.createElement('div')\n-\ttempDiv.innerHTML = props.task.description\n-\tconst plainText = tempDiv.textContent || tempDiv.innerText || ''\n+\tconst doc = new DOMParser().parseFromString(props.task.description, 'text/html')\n+\tconst plainText = doc.body.textContent || ''\n \n \tconst trimmedText = plainText.trim()\n \tif (trimmedText.length \u003c= MAX_DESCRIPTION_LENGTH) {\n"
+}

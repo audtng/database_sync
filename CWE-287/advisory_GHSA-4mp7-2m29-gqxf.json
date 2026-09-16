@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4mp7-2m29-gqxf",
+  "summary": "HashiCorp Vault Authentication bypass",
+  "severity": "high",
+  "diff": ""
+}

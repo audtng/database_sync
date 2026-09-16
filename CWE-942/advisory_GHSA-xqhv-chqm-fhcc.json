@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xqhv-chqm-fhcc",
+  "summary": "Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v2ch-c8v8-fgr7",
+  "summary": "Versity panic induced by AWS chunked data sent to port",
+  "severity": "high",
+  "diff": "diff --git a/s3api/middlewares/body-reader.go b/s3api/middlewares/body-reader.go\nindex 1c4ed50c3..43722891f 100644\n--- a/s3api/middlewares/body-reader.go\n+++ b/s3api/middlewares/body-reader.go\n@@ -15,6 +15,7 @@\n package middlewares\n \n import (\n+\t\"bytes\"\n \t\"io\"\n \n \t\"github.com/gofiber/fiber/v2\"\n@@ -25,6 +26,11 @@ func wrapBodyReader(ctx *fiber.Ctx, wr func(io.Reader) io.Reader) {\n \tr, ok := utils.ContextKeyBodyReader.Get(ctx).(io.Reader)\n \tif !ok {\n \t\tr = ctx.Request().BodyStream()\n+\t\t// Override the body reader with an empty reader to prevent panics\n+\t\t// in case of unexpected or malformed HTTP requests.\n+\t\tif r == nil {\n+\t\t\tr = bytes.NewBuffer([]byte{})\n+\t\t}\n \t}\n \n \tr = wr(r)\n"
+}

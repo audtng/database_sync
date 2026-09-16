@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mc57-h6j3-3hmv",
+  "summary": "iskorotkov/avro: Integer Overflow in Decoder",
+  "severity": "high",
+  "diff": ""
+}

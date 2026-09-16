@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m98w-cqp3-qcqr",
+  "summary": "Fiber Utils UUIDv4 and UUID Silent Fallback to Predictable Values",
+  "severity": "critical",
+  "diff": "diff --git a/common.go b/common.go\nindex b5dd378..228ebab 100644\n--- a/common.go\n+++ b/common.go\n@@ -57,12 +57,12 @@ func UUID() string {\n \t// Setup seed \u0026 counter once\n \tuuidSetup.Do(func() {\n \t\tif _, err := rand.Read(uuidSeed[:]); err != nil {\n-\t\t\treturn\n+\t\t\tpanic(fmt.Sprintf(\"utils: failed to seed UUID generator: %v\", err))\n \t\t}\n \t\tuuidCounter = binary.LittleEndian.Uint64(uuidSeed[:8])\n \t})\n \tif atomic.LoadUint64(\u0026uuidCounter) \u003c= 0 {\n-\t\treturn \"00000000-0000-0000-0000-000000000000\"\n+\t\tpanic(\"utils: UUID generator not properly seeded\")\n \t}\n \t// first 8 bytes differ, taking a slice of the first 16 bytes\n \tx := atomic.AddUint64(\u0026uuidCounter, 1)\n@@ -94,7 +94,7 @@ func UUID() string {\n func UUIDv4() string {\n \ttoken, err := uuid.NewRandom()\n \tif err != nil {\n-\t\treturn UUID()\n+\t\tpanic(fmt.Sprintf(\"utils: failed to generate secure UUID: %v\", err))\n \t}\n \treturn token.String()\n }\n"
+}

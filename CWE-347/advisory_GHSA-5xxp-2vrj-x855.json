@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5xxp-2vrj-x855",
+  "summary": "SM9 Infinity-Point Ciphertext Forgery Vulnerability",
+  "severity": "critical",
+  "diff": ""
+}

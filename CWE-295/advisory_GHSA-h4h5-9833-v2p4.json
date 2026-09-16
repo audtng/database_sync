@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h4h5-9833-v2p4",
+  "summary": "Rancher agents can be hijacked by taking over the Rancher Server URL",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m468-xcm6-fxg4",
+  "summary": "nginx-ui has Race Condition that Leads to Persistent Data Corruption and Service Collapse",
+  "severity": "high",
+  "diff": ""
+}

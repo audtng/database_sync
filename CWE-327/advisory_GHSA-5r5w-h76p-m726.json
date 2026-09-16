@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5r5w-h76p-m726",
+  "summary": "Use of a Broken or Risky Cryptographic Algorithm in Max Mazurov Maddy",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jqvr-j2vg-gjrv",
+  "summary": "Signature validation bypass in github.com/moov-io/signedxml",
+  "severity": "critical",
+  "diff": "diff --git a/validator.go b/validator.go\nindex eb13580..c0a3558 100644\n--- a/validator.go\n+++ b/validator.go\n@@ -64,7 +64,8 @@ func (v *Validator) Validate() error {\n // Otherwise, an external signature should be assigned using\n // Validator.SetSignature.\n //\n-// The references returned by this method can be used to verify what was signed.\n+// The references returned contain validated XML from the signature and must be used.\n+// Callers that ignore the returned references are vulnerable to XML injection.\n func (v *Validator) ValidateReferences() ([]string, error) {\n \tif err := v.loadValuesFromXML(); err != nil {\n \t\treturn nil, err\n"
+}

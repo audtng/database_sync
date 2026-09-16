@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7235-89m6-f4px",
+  "summary": "GoBGP has Remote Denial of Service (Panic) via Malformed Well-known Path Attribute",
+  "severity": "high",
+  "diff": ""
+}

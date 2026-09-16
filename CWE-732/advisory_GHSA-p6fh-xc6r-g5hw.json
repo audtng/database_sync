@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p6fh-xc6r-g5hw",
+  "summary": "Brokercap Bifrost subject to authentication bypass when using HTTP basic authentication",
+  "severity": "high",
+  "diff": ""
+}

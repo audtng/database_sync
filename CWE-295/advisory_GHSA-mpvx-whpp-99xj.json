@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mpvx-whpp-99xj",
+  "summary": "Filestash skips TLS certificate verification process when sending out email verification codes",
+  "severity": "high",
+  "diff": ""
+}

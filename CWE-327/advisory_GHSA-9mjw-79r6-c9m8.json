@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9mjw-79r6-c9m8",
+  "summary": "Portainer improperly uses an encryption algorithm in the AesEncrypt function",
+  "severity": "high",
+  "diff": ""
+}

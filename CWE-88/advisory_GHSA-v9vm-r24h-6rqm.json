@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v9vm-r24h-6rqm",
+  "summary": "Gogs: Release tag option injection in release deletion",
+  "severity": "high",
+  "diff": "diff --git a/internal/database/release.go b/internal/database/release.go\nindex ae56c83623f..384501aed4d 100644\n--- a/internal/database/release.go\n+++ b/internal/database/release.go\n@@ -13,7 +13,6 @@ import (\n \t\"github.com/gogs/git-module\"\n \n \t\"gogs.io/gogs/internal/errutil\"\n-\t\"gogs.io/gogs/internal/process\"\n \tapiv1types \"gogs.io/gogs/internal/route/api/v1/types\"\n )\n \n@@ -359,11 +358,13 @@ func DeleteReleaseOfRepoByID(repoID, id int64) error {\n \t\treturn errors.Newf(\"GetRepositoryByID: %v\", err)\n \t}\n \n-\t_, stderr, err := process.ExecDir(-1, repo.RepoPath(),\n-\t\tfmt.Sprintf(\"DeleteReleaseByID (git tag -d): %d\", rel.ID),\n-\t\t\"git\", \"tag\", \"-d\", rel.TagName)\n-\tif err != nil \u0026\u0026 !strings.Contains(stderr, \"not found\") {\n-\t\treturn errors.Newf(\"git tag -d: %v - %s\", err, stderr)\n+\tgitRepo, err := git.Open(repo.RepoPath())\n+\tif err != nil {\n+\t\treturn errors.Newf(\"open repository: %v\", err)\n+\t}\n+\terr = gitRepo.DeleteTag(rel.TagName)\n+\tif err != nil \u0026\u0026 !strings.Contains(err.Error(), \"not found\") {\n+\t\treturn errors.Newf(\"delete tag: %v\", err)\n \t}\n \n \tif _, err = x.Id(rel.ID).Delete(new(Release)); err != nil {\n"
+}

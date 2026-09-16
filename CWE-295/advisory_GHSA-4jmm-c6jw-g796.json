@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4jmm-c6jw-g796",
+  "summary": "Filestash configured to skip TLS certificate verification when using the FTPS protocol",
+  "severity": "high",
+  "diff": ""
+}

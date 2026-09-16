@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5cgq-3rg8-m6cv",
+  "summary": "golang.org/x/crypto vulnerable to auth bypass via unenforced @revoked status",
+  "severity": "critical",
+  "diff": ""
+}

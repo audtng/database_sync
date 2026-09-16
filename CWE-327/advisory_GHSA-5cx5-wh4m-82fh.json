@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5cx5-wh4m-82fh",
+  "summary": "MinIO has JWT Algorithm Confusion in OIDC Authentication",
+  "severity": "critical",
+  "diff": ""
+}

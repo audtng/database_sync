@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-94jr-7pqp-xhcq",
+  "summary": "Tekton Pipeline: Git Resolver Unsanitized Revision Parameter Enables git Argument Injection Leading to RCE",
+  "severity": "high",
+  "diff": ""
+}

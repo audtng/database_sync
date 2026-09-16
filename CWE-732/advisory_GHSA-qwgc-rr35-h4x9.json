@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qwgc-rr35-h4x9",
+  "summary": "External Secrets Operator vulnerable to privilege escalation",
+  "severity": "high",
+  "diff": "diff --git a/deploy/charts/external-secrets/templates/cert-controller-rbac.yaml b/deploy/charts/external-secrets/templates/cert-controller-rbac.yaml\nindex 83e49f0ae0e..84a0c110bd0 100644\n--- a/deploy/charts/external-secrets/templates/cert-controller-rbac.yaml\n+++ b/deploy/charts/external-secrets/templates/cert-controller-rbac.yaml\n@@ -22,6 +22,8 @@ rules:\n     - \"validatingwebhookconfigurations\"\n     verbs:\n     - \"list\"\n+    - \"watch\"\n+    - \"get\"\n   - apiGroups:\n     - \"admissionregistration.k8s.io\"\n     resources:\n@@ -30,8 +32,6 @@ rules:\n     - \"secretstore-validate\"\n     - \"externalsecret-validate\"\n     verbs:\n-    - \"get\"\n-    - \"watch\"\n     - \"update\"\n     - \"patch\"\n   - apiGroups:\n"
+}

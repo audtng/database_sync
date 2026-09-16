@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gh5c-3h97-2f3q",
+  "summary": "Moby Race Condition vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/pkg/streamformatter/streamformatter.go b/pkg/streamformatter/streamformatter.go\nindex b0456e580dc9d..098df6b5236b9 100644\n--- a/pkg/streamformatter/streamformatter.go\n+++ b/pkg/streamformatter/streamformatter.go\n@@ -5,6 +5,7 @@ import (\n \t\"encoding/json\"\n \t\"fmt\"\n \t\"io\"\n+\t\"sync\"\n \n \t\"github.com/docker/docker/pkg/jsonmessage\"\n \t\"github.com/docker/docker/pkg/progress\"\n@@ -109,6 +110,7 @@ type progressOutput struct {\n \tsf       formatProgress\n \tout      io.Writer\n \tnewLines bool\n+\tmu       sync.Mutex\n }\n \n // WriteProgress formats progress information from a ProgressReader.\n@@ -120,6 +122,9 @@ func (out *progressOutput) WriteProgress(prog progress.Progress) error {\n \t\tjsonProgress := jsonmessage.JSONProgress{Current: prog.Current, Total: prog.Total, HideCounts: prog.HideCounts, Units: prog.Units}\n \t\tformatted = out.sf.formatProgress(prog.ID, prog.Action, \u0026jsonProgress, prog.Aux)\n \t}\n+\n+\tout.mu.Lock()\n+\tdefer out.mu.Unlock()\n \t_, err := out.out.Write(formatted)\n \tif err != nil {\n \t\treturn err\n"
+}

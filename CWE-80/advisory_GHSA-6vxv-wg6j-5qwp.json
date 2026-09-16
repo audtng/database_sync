@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6vxv-wg6j-5qwp",
+  "summary": "Gogs: XSS in .ipynb files renderer due to outdated notebookjs",
+  "severity": "high",
+  "diff": ""
+}

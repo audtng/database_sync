@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2wp2-chmh-r934",
+  "summary": "golang.org/x/net/html NULL Pointer Dereference vulnerability",
+  "severity": "high",
+  "diff": ""
+}

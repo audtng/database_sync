@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9phm-fm57-rhg8",
+  "summary": "Panic when parsing invalid palette-color images in golang.org/x/image",
+  "severity": "high",
+  "diff": ""
+}

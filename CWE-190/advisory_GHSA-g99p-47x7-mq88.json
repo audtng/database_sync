@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g99p-47x7-mq88",
+  "summary": "go-f3 module vulnerable to integer overflow leading to panic",
+  "severity": "high",
+  "diff": ""
+}

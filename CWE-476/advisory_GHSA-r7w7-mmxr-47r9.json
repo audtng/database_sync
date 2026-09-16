@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r7w7-mmxr-47r9",
+  "summary": "Incus has a Nil-Pointer Dereference via Custom Volume Import",
+  "severity": "high",
+  "diff": ""
+}

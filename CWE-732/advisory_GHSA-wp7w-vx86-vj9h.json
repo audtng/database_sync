@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wp7w-vx86-vj9h",
+  "summary": "Podman Elevated Container Privileges",
+  "severity": "high",
+  "diff": ""
+}

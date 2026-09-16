@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-826q-wrq4-p23x",
+  "summary": "Ella Core panics on malformed NGAP Location Report",
+  "severity": "high",
+  "diff": ""
+}

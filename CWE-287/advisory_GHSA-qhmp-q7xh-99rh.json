@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qhmp-q7xh-99rh",
+  "summary": "CoreDNS has TSIG authentication bypass on DoT, DoH, DoH3, DoQ, and gRPC",
+  "severity": "high",
+  "diff": ""
+}

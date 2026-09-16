@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wpfp-cm49-9m9q",
+  "summary": "HashiCorp go-slug Vulnerable to Zip Slip Attack",
+  "severity": "high",
+  "diff": ""
+}

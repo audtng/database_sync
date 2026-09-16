@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4jhw-c53w-w5r7",
+  "summary": "PipeCD Vulnerable to Privilege Escalation",
+  "severity": "high",
+  "diff": ""
+}

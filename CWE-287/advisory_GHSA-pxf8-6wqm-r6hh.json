@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pxf8-6wqm-r6hh",
+  "summary": "Note Mark: OIDC-registered users authenticated by submitting password \"null\"",
+  "severity": "critical",
+  "diff": "diff --git a/backend/db/models.go b/backend/db/models.go\nindex 423fbc1..fc96837 100644\n--- a/backend/db/models.go\n+++ b/backend/db/models.go\n@@ -51,7 +51,7 @@ func (u *User) IsPasswordMatch(plainPassword string) bool {\n \t} else {\n \t\tcurrent = u.Password\n \t}\n-\tif err := bcrypt.CompareHashAndPassword(current, []byte(plainPassword)); err == nil {\n+\tif err := bcrypt.CompareHashAndPassword(current, []byte(plainPassword)); err == nil \u0026\u0026 len(u.Password) != 0 {\n \t\treturn true\n \t}\n \treturn false\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vpxf-q44g-w34w",
+  "summary": "Sealos billing system permission control defect",
+  "severity": "high",
+  "diff": ""
+}

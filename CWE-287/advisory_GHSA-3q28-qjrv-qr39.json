@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3q28-qjrv-qr39",
+  "summary": "Tinyauth vulnerable to TOTP/2FA bypass via OIDC authorize endpoint",
+  "severity": "high",
+  "diff": ""
+}

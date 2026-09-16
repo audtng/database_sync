@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3g9h-9hp4-654v",
+  "summary": "SiYuan has an Unauthenticated WebSocket DoS via Auth Keepalive Bypass",
+  "severity": "high",
+  "diff": ""
+}

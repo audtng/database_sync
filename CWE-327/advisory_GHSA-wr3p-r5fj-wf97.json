@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wr3p-r5fj-wf97",
+  "summary": "Beego privilege escalation vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/core/utils/file.go b/core/utils/file.go\nindex 6090eb1710..2310a6b326 100644\n--- a/core/utils/file.go\n+++ b/core/utils/file.go\n@@ -69,6 +69,7 @@ func GrepFile(patten string, filename string) (lines []string, err error) {\n \tif err != nil {\n \t\treturn\n \t}\n+\tdefer fd.Close()\n \tlines = make([]string, 0)\n \treader := bufio.NewReader(fd)\n \tprefix := \"\"\n"
+}

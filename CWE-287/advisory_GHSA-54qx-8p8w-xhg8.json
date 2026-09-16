@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-54qx-8p8w-xhg8",
+  "summary": "SFTPGo vulnerable to recovery codes abuse",
+  "severity": "high",
+  "diff": ""
+}

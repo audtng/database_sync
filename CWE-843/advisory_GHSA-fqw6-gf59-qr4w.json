@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fqw6-gf59-qr4w",
+  "summary": "containerd user ID handling bypass allows runAsNonRoot evasion",
+  "severity": "high",
+  "diff": ""
+}

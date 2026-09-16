@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xggc-qprg-x6mw",
+  "summary": "Weave GitOps leaked cluster credentials into logs on connection errors",
+  "severity": "critical",
+  "diff": "diff --git a/core/clustersmngr/factory.go b/core/clustersmngr/factory.go\nindex 513eda5996..b7bc2c84d8 100644\n--- a/core/clustersmngr/factory.go\n+++ b/core/clustersmngr/factory.go\n@@ -131,7 +131,7 @@ func (cf *clientsFactory) watchNamespaces(ctx context.Context) {\n func (cf *clientsFactory) UpdateNamespaces(ctx context.Context) error {\n \tclients, err := clientsForClusters(cf.clusters.Get())\n \tif err != nil {\n-\t\tcf.log.Error(err, \"failed to create clients for\", \"clusters\", cf.clusters.Get())\n+\t\tcf.log.Error(err, \"failed to create client\")\n \t\treturn err\n \t}\n \n"
+}

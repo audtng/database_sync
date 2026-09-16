@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vp29-5652-4fw9",
+  "summary": "CoreDNS has TSIG authentication bypass on gRPC and QUIC transports",
+  "severity": "high",
+  "diff": ""
+}

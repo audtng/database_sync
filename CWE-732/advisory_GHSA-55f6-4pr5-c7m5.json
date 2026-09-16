@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-55f6-4pr5-c7m5",
+  "summary": "Kahi has privilege-drop and socket/log permission issues",
+  "severity": "high",
+  "diff": ""
+}

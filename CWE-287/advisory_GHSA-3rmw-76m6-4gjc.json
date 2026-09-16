@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3rmw-76m6-4gjc",
+  "summary": "User Registration Bypass in Zitadel",
+  "severity": "high",
+  "diff": ""
+}

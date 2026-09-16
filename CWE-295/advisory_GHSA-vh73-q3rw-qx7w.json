@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vh73-q3rw-qx7w",
+  "summary": "Boundary vulnerable to session hijacking through TLS certificate tampering",
+  "severity": "high",
+  "diff": ""
+}

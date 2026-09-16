@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-86c6-3g63-5w64",
+  "summary": "Hashicorp Vault Incorrect Permission Assignment for Critical Resource vulnerability",
+  "severity": "high",
+  "diff": ""
+}

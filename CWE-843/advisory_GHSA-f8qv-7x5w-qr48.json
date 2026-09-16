@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f8qv-7x5w-qr48",
+  "summary": "free5GC NRF: type-confusion panic in POST /oauth2/token structured-form parser via Reflect.Set on incompatible types",
+  "severity": "high",
+  "diff": ""
+}

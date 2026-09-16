@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wf45-q9ch-q8gh",
+  "summary": "Apache Thrift TFramedTransport Go language implementation has an Integer Overflow or Wraparound vulnerability",
+  "severity": "high",
+  "diff": ""
+}

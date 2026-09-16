@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-255v-qv84-29p5",
+  "summary": "DragonFly's manager generates mTLS certificates for arbitrary IP addresses",
+  "severity": "high",
+  "diff": ""
+}

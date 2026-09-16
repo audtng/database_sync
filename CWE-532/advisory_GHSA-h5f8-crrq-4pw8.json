@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h5f8-crrq-4pw8",
+  "summary": "Contrast workload secrets leak to logs on INFO level",
+  "severity": "high",
+  "diff": ""
+}

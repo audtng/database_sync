@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8c26-wmh5-6g9v",
+  "summary": "golang.org/x/crypto/ssh Denial of service via crafted Signer",
+  "severity": "high",
+  "diff": ""
+}

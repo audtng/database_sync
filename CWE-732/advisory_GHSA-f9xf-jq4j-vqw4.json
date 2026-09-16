@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f9xf-jq4j-vqw4",
+  "summary": "Rancher does not properly specify ApiGroup when creating Kubernetes RBAC resources",
+  "severity": "high",
+  "diff": ""
+}

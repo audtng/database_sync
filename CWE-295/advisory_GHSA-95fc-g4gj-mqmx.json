@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-95fc-g4gj-mqmx",
+  "summary": "Steve doesn’t verify a server’s certificate and is susceptible to man-in-the-middle (MitM) attacks",
+  "severity": "high",
+  "diff": ""
+}

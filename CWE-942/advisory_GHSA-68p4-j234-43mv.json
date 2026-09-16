@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-68p4-j234-43mv",
+  "summary": "SiYuan is Vulnerable to Cross-Origin RCE via Permissive CORS Policy and JavaScript Snippet Injection",
+  "severity": "critical",
+  "diff": ""
+}

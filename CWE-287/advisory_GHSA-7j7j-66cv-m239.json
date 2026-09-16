@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7j7j-66cv-m239",
+  "summary": "ZITADEL's Improper Lockout Mechanism Leads to MFA Bypass",
+  "severity": "high",
+  "diff": ""
+}

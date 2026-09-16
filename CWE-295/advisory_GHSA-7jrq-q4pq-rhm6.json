@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7jrq-q4pq-rhm6",
+  "summary": "Oxia's TLS CA certificate chain validation fails with multi-certificate PEM bundles",
+  "severity": "high",
+  "diff": ""
+}

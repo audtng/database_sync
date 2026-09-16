@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wfqx-gjrf-g28r",
+  "summary": "Crossplane: Signature verification TOCTOU allows installing unverified package content via mutable tag",
+  "severity": "critical",
+  "diff": ""
+}

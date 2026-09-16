@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gvrj-cjch-728p",
+  "summary": "Juju has Improper TLS Client/Server authentication and certificate verification on Database Cluster",
+  "severity": "critical",
+  "diff": ""
+}

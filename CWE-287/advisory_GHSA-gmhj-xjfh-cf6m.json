@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gmhj-xjfh-cf6m",
+  "summary": "Caddy-SSH vulnerable to Authorization Bypass due to incorrect usage of PAM library",
+  "severity": "high",
+  "diff": "diff --git a/internal/authentication/os/pam.go b/internal/authentication/os/pam.go\nindex a37eac6..ed6c759 100644\n--- a/internal/authentication/os/pam.go\n+++ b/internal/authentication/os/pam.go\n@@ -62,6 +62,11 @@ func (pm OS) AuthenticateUser(sshctx session.ConnMetadata, password []byte) (aut\n \t\tpm.logger.Warn(\"error Authenticate\", zap.Error(err))\n \t\treturn nil, false, err\n \t}\n+\terr = t.AcctMgmt(0)\n+\tif err != nil {\n+\t\tpm.logger.Warn(\"error Authenticate\", zap.Error(err))\n+\t\treturn nil, false, err\n+\t}\n \tu, err := user.Lookup(sshctx.User())\n \tif err != nil {\n \t\treturn nil, false, err\n"
+}

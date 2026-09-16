@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p9mg-74mg-cwwr",
+  "summary": "free5GC's SMF UPI DELETE /upi/v1/upNodesLinks/{ref} panics on AN-node deletion via nil UPF dereference; unauthenticated, state-mutating",
+  "severity": "high",
+  "diff": ""
+}

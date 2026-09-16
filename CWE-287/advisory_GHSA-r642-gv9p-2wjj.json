@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r642-gv9p-2wjj",
+  "summary": "Argo CD will blindly trust JWT claims if anonymous access is enabled",
+  "severity": "critical",
+  "diff": ""
+}

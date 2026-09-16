@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4hjq-9h5c-252j",
+  "summary": "Traefik: HTTP/2 frames can cause a running server to panic",
+  "severity": "high",
+  "diff": ""
+}

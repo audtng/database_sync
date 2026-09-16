@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7943-82jg-wmw5",
+  "summary": "Argo CD certificate verification is skipped for connections to OIDC providers",
+  "severity": "high",
+  "diff": ""
+}

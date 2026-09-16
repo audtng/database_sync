@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6452-jr93-r5qm",
+  "summary": "b3log Wide unauthenticated file access",
+  "severity": "high",
+  "diff": ""
+}

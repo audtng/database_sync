@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mxrx-fg8p-5p5j",
+  "summary": "Bifrost vulnerable to authentication check flaw that leads to authentication bypass",
+  "severity": "high",
+  "diff": "diff --git a/admin/view/public/js/ajax.js b/admin/view/public/js/ajax.js\nindex cf89c290..96e8ad3d 100644\n--- a/admin/view/public/js/ajax.js\n+++ b/admin/view/public/js/ajax.js\n@@ -20,8 +20,8 @@ function Ajax(method,url,data,callbackFun,sync) {\n         contentType: \"application/json\",\r\n         success:function(callbackData){ //请求成功的回调函数\r\n             if (callbackData.hasOwnProperty(\"status\")){\r\n-                if (data.status == -1) {\r\n-                    alert(data.msg);\r\n+                if (callbackData.status == -1) {\r\n+                    alert(callbackData.msg);\r\n                     return;\r\n                 }\r\n             }\r\n@@ -46,8 +46,8 @@ function AjaxGet(method,url,data,callbackFun,async) {\n         async:async,\r\n         success:function(callbackData){ //请求成功的回调函数\r\n             if (callbackData.hasOwnProperty(\"status\")){\r\n-                if (data.status == -1) {\r\n-                    alert(data.msg);\r\n+                if (callbackData.status == -1) {\r\n+                    alert(callbackData.msg);\r\n                     return;\r\n                 }\r\n             }\r\n"
+}

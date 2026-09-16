@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jr65-gpj5-cw74",
+  "summary": "go-resolver's DNSSEC validation not performed correctly",
+  "severity": "high",
+  "diff": ""
+}

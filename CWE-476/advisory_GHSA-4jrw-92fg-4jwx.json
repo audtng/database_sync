@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4jrw-92fg-4jwx",
+  "summary": "free5GC AUSF UE Authentication Panic on Nil SuciSupiMap Interface Conversion",
+  "severity": "high",
+  "diff": ""
+}

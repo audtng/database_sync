@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5684-g483-2249",
+  "summary": "Signature Validation Bypass",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hmm9-r2m2-qg9w",
+  "summary": "Nil dereference in NATS JWT causing DoS of nats-server",
+  "severity": "high",
+  "diff": ""
+}

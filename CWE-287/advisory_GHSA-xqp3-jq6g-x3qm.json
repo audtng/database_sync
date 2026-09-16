@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xqp3-jq6g-x3qm",
+  "summary": "File Browser: Authentication Bypass via Proxy Auth Header Forgery",
+  "severity": "critical",
+  "diff": ""
+}

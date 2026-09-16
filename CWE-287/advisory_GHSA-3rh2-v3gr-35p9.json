@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3rh2-v3gr-35p9",
+  "summary": "MinIO is Vulnerable to SSE Metadata Injection via Replication Headers",
+  "severity": "high",
+  "diff": ""
+}

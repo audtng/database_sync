@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wvjg-33p9-938h",
+  "summary": "Mattermost Server does not properly restrict use of slash commands",
+  "severity": "high",
+  "diff": ""
+}

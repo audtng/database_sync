@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7h8m-pvw3-5gh4",
+  "summary": "Rancher allows privilege escalation in Windows nodes due to Insecure Access Control Lists",
+  "severity": "critical",
+  "diff": ""
+}

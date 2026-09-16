@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vqc4-mpj8-jxch",
+  "summary": "Grafana Race condition allowing privilege escalation",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jc6w-8r7f-vmp5",
+  "summary": "Mattermost Server vulnerable to Denial of Service through `@` character prefix inserted into JavaScript field names",
+  "severity": "high",
+  "diff": ""
+}

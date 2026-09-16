@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j59f-x285-69jx",
+  "summary": "free5GC's NEF 3gpp-pfd-management PATCH applications/{appId} panics on UDR access failure due to nil ProblemDetails dereference",
+  "severity": "high",
+  "diff": ""
+}

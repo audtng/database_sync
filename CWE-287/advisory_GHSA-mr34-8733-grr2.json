@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mr34-8733-grr2",
+  "summary": "Memos' Access Tokens Stay Valid after User Password Change",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q4gv-pjmh-c735",
+  "summary": "Open Cluster Management (OCM): Cross-cluster privilege escalation via improper Kubernetes client certificate renewal validation",
+  "severity": "high",
+  "diff": ""
+}

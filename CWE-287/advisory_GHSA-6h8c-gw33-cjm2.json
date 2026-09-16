@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6h8c-gw33-cjm2",
+  "summary": "DevSpace vulnerable to remote code execution",
+  "severity": "critical",
+  "diff": ""
+}

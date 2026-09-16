@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c8x3-rg72-fwwg",
+  "summary": "Privilege escalation in Hashicorp Nomad",
+  "severity": "high",
+  "diff": ""
+}

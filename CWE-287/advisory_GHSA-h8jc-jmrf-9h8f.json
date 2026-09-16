@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h8jc-jmrf-9h8f",
+  "summary": "Argo CD Insecure default administrative password",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8c69-r38j-rpfj",
+  "summary": "Rancher cattle-token is predictable",
+  "severity": "high",
+  "diff": ""
+}

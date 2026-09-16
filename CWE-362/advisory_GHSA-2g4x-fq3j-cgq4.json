@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2g4x-fq3j-cgq4",
+  "summary": "Dalfox has an Unauthenticated Remote DoS via Closed-Channel Write in `ParameterAnalysis` (server mode)",
+  "severity": "high",
+  "diff": ""
+}

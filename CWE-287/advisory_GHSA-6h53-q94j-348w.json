@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6h53-q94j-348w",
+  "summary": "RobotsAndPencils go-saml authentication bypass vulnerability",
+  "severity": "high",
+  "diff": ""
+}

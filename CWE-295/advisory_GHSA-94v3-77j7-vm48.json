@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-94v3-77j7-vm48",
+  "summary": "Gitea: Internal API HTTP client hardcodes InsecureSkipVerify:true with no config override",
+  "severity": "high",
+  "diff": ""
+}

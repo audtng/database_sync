@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rhxj-gh46-jvw8",
+  "summary": "Grafana Plugin signature bypass",
+  "severity": "high",
+  "diff": ""
+}

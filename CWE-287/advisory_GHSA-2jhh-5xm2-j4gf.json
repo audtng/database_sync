@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2jhh-5xm2-j4gf",
+  "summary": "Improper Authentication in HashiCorp Nomad",
+  "severity": "high",
+  "diff": ""
+}

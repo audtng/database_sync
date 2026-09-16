@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f5wc-c3c7-36mc",
+  "summary": "golang.org/x/crypto doesn't drop invoking agent constraints when forwarding keys",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-x92x-px7w-4gx4",
+  "summary": "Dgraph: Pre-Auth Full Database Exfiltration via DQL Injection in NQuad Lang Field",
+  "severity": "critical",
+  "diff": ""
+}

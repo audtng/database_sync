@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hfg8-hc9c-6c3h",
+  "summary": "moby/go-archive: Crafted tar archive can write outside the extraction directory",
+  "severity": "high",
+  "diff": ""
+}

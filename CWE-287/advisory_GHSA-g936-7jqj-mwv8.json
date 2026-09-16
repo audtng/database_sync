@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g936-7jqj-mwv8",
+  "summary": "TSDProxy: Internal proxy auth token forwarded to backend services enables management API escalation",
+  "severity": "critical",
+  "diff": ""
+}

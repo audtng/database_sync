@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-68wm-pfjf-wqp6",
+  "summary": "Authelia vulnerable to an authentication bypassed with malformed request URI on nginx",
+  "severity": "critical",
+  "diff": "diff --git a/internal/handlers/handler_verify.go b/internal/handlers/handler_verify.go\nindex 0b08059a54e08..331eece1fd2ff 100644\n--- a/internal/handlers/handler_verify.go\n+++ b/internal/handlers/handler_verify.go\n@@ -428,7 +428,9 @@ func VerifyGet(cfg schema.AuthenticationBackendConfiguration) middlewares.Reques\n \t\ttargetURL, err := ctx.GetOriginalURL()\n \n \t\tif err != nil {\n-\t\t\tctx.Error(fmt.Errorf(\"Unable to parse target URL: %s\", err), operationFailedMessage)\n+\t\t\tctx.Logger.Error(fmt.Errorf(\"Unable to parse target URL: %s\", err))\n+\t\t\tctx.ReplyUnauthorized()\n+\n \t\t\treturn\n \t\t}\n \n"
+}

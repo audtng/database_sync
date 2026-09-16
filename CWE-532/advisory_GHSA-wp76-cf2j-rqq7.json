@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wp76-cf2j-rqq7",
+  "summary": "Headscale writes bearer tokens to info-level logs",
+  "severity": "high",
+  "diff": ""
+}

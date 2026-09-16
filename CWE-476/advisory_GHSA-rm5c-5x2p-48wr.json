@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rm5c-5x2p-48wr",
+  "summary": "Klever-Go KVM: Unauthenticated remote node crash (nil-pointer DoS) in klever-go P2P transaction interceptor (txVersionChecker nil RawData) - potential chain halt",
+  "severity": "high",
+  "diff": ""
+}

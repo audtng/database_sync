@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5fg6-wrq4-w5gh",
+  "summary": "AdGuard Home: HTTP/2 Cleartext (h2c) Upgrade Authentication Bypass",
+  "severity": "critical",
+  "diff": ""
+}

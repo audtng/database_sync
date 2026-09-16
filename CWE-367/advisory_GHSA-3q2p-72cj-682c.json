@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3q2p-72cj-682c",
+  "summary": "File Browser: Improper Access Control Occurs via Pre-Created Public Share for a Non-existent Path",
+  "severity": "high",
+  "diff": "diff --git a/http/share.go b/http/share.go\nindex ec95d06629a..a0a15dc9d92 100644\n--- a/http/share.go\n+++ b/http/share.go\n@@ -99,6 +99,13 @@ var shareDeleteHandler = withPermShare(func(_ http.ResponseWriter, r *http.Reque\n })\n \n var sharePostHandler = withPermShare(func(w http.ResponseWriter, r *http.Request, d *data) (int, error) {\n+\t// Only allow sharing paths that currently exist. Otherwise a share could be\n+\t// created for a non-existent path and would silently start exposing\n+\t// whatever file later appears there.\n+\tif _, err := d.user.Fs.Stat(r.URL.Path); err != nil {\n+\t\treturn errToStatus(err), err\n+\t}\n+\n \tvar s *share.Link\n \tvar body share.CreateBody\n \tif r.Body != nil {\n"
+}

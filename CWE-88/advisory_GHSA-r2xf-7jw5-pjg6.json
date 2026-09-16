@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r2xf-7jw5-pjg6",
+  "summary": "Docker MCP Gateway: Argument injection via OCI image label YAML",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gg42-mwr6-p82c",
+  "summary": "Mattermost Server has intermittent Authorization bypass for resource-owners",
+  "severity": "high",
+  "diff": ""
+}

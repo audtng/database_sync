@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7mjv-x3jf-545x",
+  "summary": "cloudflared's Installer has Local Privilege Escalation Vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/cloudflared.wxs b/cloudflared.wxs\nindex 8b0ad1dfeb7..857d30133c0 100644\n--- a/cloudflared.wxs\n+++ b/cloudflared.wxs\n@@ -1,9 +1,9 @@\n \u003c?xml version=\"1.0\"?\u003e\n \n-\u003c?if $(var.Platform)=\"x86\"?\u003e\n-    \u003c?define Program_Files=\"ProgramFilesFolder\"?\u003e\n-\u003c?else ?\u003e\n+\u003c?if $(var.Platform)=\"x64\" ?\u003e\n     \u003c?define Program_Files=\"ProgramFiles64Folder\"?\u003e\n+\u003c?else ?\u003e\n+    \u003c?define Program_Files=\"ProgramFilesFolder\"?\u003e\n \u003c?endif ?\u003e\n \u003c?ifndef var.Version?\u003e\n     \u003c?error Undefined Version variable?\u003e\n"
+}

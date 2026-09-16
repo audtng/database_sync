@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-75rw-34q6-72cr",
+  "summary": "Signature forgery in Biscuit",
+  "severity": "critical",
+  "diff": ""
+}

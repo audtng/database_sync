@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4jj9-cgqc-x9h5",
+  "summary": "NeuVector OpenID Connect is vulnerable to man-in-the-middle (MITM)",
+  "severity": "high",
+  "diff": "diff --git a/controller/kv/create.go b/controller/kv/create.go\nindex e61a5446e..e18960c5f 100644\n--- a/controller/kv/create.go\n+++ b/controller/kv/create.go\n@@ -427,10 +427,20 @@ func createAdmCtrlRules() {\n \t}\n }\n func createDefaultServiceMeshMonitor() {\n+\tmodified := false\n \tacc := access.NewReaderAccessControl()\n \tcfg, rev := clusHelper.GetSystemConfigRev(acc)\n \tif !cfg.TapProxymesh {\n \t\tcfg.TapProxymesh = true\n+\t\tmodified = true\n+\t}\n+\n+\t// enable TLS verification for communications to LDAP/OIDC/webhook/registry servers by default for new deployment\n+\tif !cfg.EnableTLSVerification {\n+\t\tcfg.EnableTLSVerification = true\n+\t\tmodified = true\n+\t}\n+\tif modified {\n \t\t_ = clusHelper.PutSystemConfigRev(cfg, rev)\n \t}\n }\n"
+}

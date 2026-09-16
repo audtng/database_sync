@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-275h-v5h9-vr82",
+  "summary": "Siyuan: Authenticated path traversal in /snippets/ static handler (serveSnippets) leaks conf/conf.json secrets and siyuan.db",
+  "severity": "high",
+  "diff": "diff --git a/kernel/server/serve.go b/kernel/server/serve.go\nindex 78cfcad9f2e..cd15a92f8b5 100644\n--- a/kernel/server/serve.go\n+++ b/kernel/server/serve.go\n@@ -418,6 +418,18 @@ func serveSnippets(ginServer *gin.Engine) {\n \n \t\t// 没有在配置文件中命中时在文件系统上查找\n \t\tfilePath = filepath.Join(util.SnippetsPath, filePath)\n+\n+\t\t// 限制只能访问 snippets 目录内的文件，并拦截敏感路径，避免通过路径穿越读取工作空间内的敏感文件\n+\t\tif !gulu.File.IsSubPath(util.SnippetsPath, filePath) {\n+\t\t\tc.Status(http.StatusUnauthorized)\n+\t\t\treturn\n+\t\t}\n+\t\tif util.IsSensitivePath(filePath) {\n+\t\t\tlogging.LogErrorf(\"refuse to serve sensitive snippet file [%s]\", c.Request.URL.Path)\n+\t\t\tc.Status(http.StatusForbidden)\n+\t\t\treturn\n+\t\t}\n+\n \t\tc.File(filePath)\n \t})\n }\n"
+}

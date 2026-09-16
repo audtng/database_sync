@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9ghh-mmcq-8phc",
+  "summary": "Rancher does not automatically clean up a user deleted or disabled from the configured Authentication Provider",
+  "severity": "high",
+  "diff": ""
+}

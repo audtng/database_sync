@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w879-237q-wc7r",
+  "summary": "golang.org/x/crypto: Invoking pathological RSA/DSA parameters may cause DoS",
+  "severity": "high",
+  "diff": ""
+}

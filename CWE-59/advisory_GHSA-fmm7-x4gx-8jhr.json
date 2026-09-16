@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fmm7-x4gx-8jhr",
+  "summary": "File Browser: Out-of-scope file deletion by a Create-only scoped user via symlink-following RemoveAll in upload failure-cleanup",
+  "severity": "high",
+  "diff": ""
+}

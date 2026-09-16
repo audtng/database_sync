@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gppm-hq3p-h4rp",
+  "summary": "Git credentials are exposed in Atlantis logs",
+  "severity": "high",
+  "diff": "diff --git a/server/events/vcs/gh_app_creds_rotator.go b/server/events/vcs/gh_app_creds_rotator.go\nindex 6522f33118..d5b059f972 100644\n--- a/server/events/vcs/gh_app_creds_rotator.go\n+++ b/server/events/vcs/gh_app_creds_rotator.go\n@@ -61,7 +61,7 @@ func (r *githubAppTokenRotator) rotate() error {\n \tif err != nil {\n \t\treturn errors.Wrap(err, \"Getting github token\")\n \t}\n-\tr.log.Debug(\"token %s\", token)\n+\tr.log.Debug(\"Token successfully refreshed\")\n \n \t// https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#http-based-git-access-by-an-installation\n \tif err := WriteGitCreds(\"x-access-token\", token, r.githubHostname, r.homeDirPath, r.log, true); err != nil {\n"
+}

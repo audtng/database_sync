@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mc24-7m59-4q5p",
+  "summary": "Rancher CLI skips TLS verification on Rancher CLI login command",
+  "severity": "high",
+  "diff": ""
+}

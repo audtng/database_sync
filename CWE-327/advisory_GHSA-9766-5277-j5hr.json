@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9766-5277-j5hr",
+  "summary": "ArgoCD Vulnerable to Use of Risky or Missing Cryptographic Algorithms in Redis Cache",
+  "severity": "critical",
+  "diff": ""
+}

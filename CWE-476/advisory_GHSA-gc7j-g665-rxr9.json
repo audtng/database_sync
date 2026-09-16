@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gc7j-g665-rxr9",
+  "summary": "Incus has a Nil-Pointer Dereference Panic via Bucket Metadata",
+  "severity": "high",
+  "diff": ""
+}

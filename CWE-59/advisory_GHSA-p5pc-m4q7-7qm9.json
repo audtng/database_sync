@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p5pc-m4q7-7qm9",
+  "summary": "Helm Unsafe Link Following",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f59h-q822-g45g",
+  "summary": "Caddy: FastCGI header normalization bypass in `forward_auth copy_headers`",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vw86-c94w-v3x4",
+  "summary": "SiYuan: Publish Reader Path Traversal Delete via `removeUnusedAttributeView`",
+  "severity": "high",
+  "diff": ""
+}

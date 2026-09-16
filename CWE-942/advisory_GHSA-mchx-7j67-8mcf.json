@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mchx-7j67-8mcf",
+  "summary": "Casdoor CORS misconfiguration (GHSL-2024-035)",
+  "severity": "high",
+  "diff": ""
+}

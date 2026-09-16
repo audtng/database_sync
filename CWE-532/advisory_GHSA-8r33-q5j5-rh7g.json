@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8r33-q5j5-rh7g",
+  "summary": "APM Server vulnerable to Insertion of Sensitive Information into Log File",
+  "severity": "high",
+  "diff": ""
+}

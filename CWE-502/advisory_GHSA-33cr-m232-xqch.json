@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-33cr-m232-xqch",
+  "summary": "cheqd-node affected by Non-deterministic JSON Unmarshalling of IBC Acknowledgement",
+  "severity": "critical",
+  "diff": ""
+}
