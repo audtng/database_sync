@@ -17,13 +17,15 @@
  SCRIPT="push.sh"
 
  
+ cd "../"
 
  echo "[Container] Cloning the repository..."
  git clone "https://${USERNAME}:${GITHUB_TOKEN}@${REPO_URL}" "/workspace/${REPO_NAME}"
 
- cd "/workspace/${database_sync}"
- cp "/json" "../rulegen"
-
+ cd "/workspace/database_sync"
+ echo "$(pwd)"
+ cp "json" "-r" "../rulegen"
+ cd "../rulegen"
  echo "[Container] Running ${SCRIPT}..."
  bash "${SCRIPT}"
 
