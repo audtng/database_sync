@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jrhg-82w2-vvj7",
+  "summary": "Gin-vue-admin has an arbitrary file deletion vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/server/api/v1/example/exa_breakpoint_continue.go b/server/api/v1/example/exa_breakpoint_continue.go\nindex 8f39cb160e..27a8a6aa3c 100644\n--- a/server/api/v1/example/exa_breakpoint_continue.go\n+++ b/server/api/v1/example/exa_breakpoint_continue.go\n@@ -135,6 +135,11 @@ func (b *FileUploadAndDownloadApi) RemoveChunk(c *gin.Context) {\n \t\tresponse.FailWithMessage(err.Error(), c)\n \t\treturn\n \t}\n+\t// 路径穿越拦截\n+\tif strings.Contains(file.FilePath, \"..\") || strings.Contains(file.FilePath, \"../\") || strings.Contains(file.FilePath, \"./\") || strings.Contains(file.FilePath, \".\\\\\") {\n+\t\tresponse.FailWithMessage(\"非法路径，禁止删除\", c)\n+\t\treturn\n+\t}\n \terr = utils.RemoveChunk(file.FileMd5)\n \tif err != nil {\n \t\tglobal.GVA_LOG.Error(\"缓存切片删除失败!\", zap.Error(err))\n"
+}

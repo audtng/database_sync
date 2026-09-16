@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rg65-45m7-hq57",
+  "summary": "esm.sh: Path Traversal via package.json browser field allows reading arbitrary server files",
+  "severity": "high",
+  "diff": ""
+}

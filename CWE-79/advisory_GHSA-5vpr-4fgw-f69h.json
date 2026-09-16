@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5vpr-4fgw-f69h",
+  "summary": "File Browser is vulnerable to Stored Cross-site Scripting via crafted EPUB file",
+  "severity": "high",
+  "diff": ""
+}

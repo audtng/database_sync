@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2mrg-35hw-x3x9",
+  "summary": "Gotenberg: SSRF via LibreOffice document processing",
+  "severity": "high",
+  "diff": ""
+}

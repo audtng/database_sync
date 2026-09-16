@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7fxv-8wr2-mfc4",
+  "summary": "Local Path Provisioner Vulnerable to HelperPod Template Injection",
+  "severity": "high",
+  "diff": ""
+}

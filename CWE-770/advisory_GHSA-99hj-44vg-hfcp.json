@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-99hj-44vg-hfcp",
+  "summary": "Fleet's unbounded request body read allows remote Denial of Service",
+  "severity": "high",
+  "diff": ""
+}

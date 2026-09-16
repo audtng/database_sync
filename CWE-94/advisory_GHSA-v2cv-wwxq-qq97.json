@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v2cv-wwxq-qq97",
+  "summary": "Moby Docker cp broken with debian containers",
+  "severity": "critical",
+  "diff": "diff --git a/pkg/chrootarchive/archive.go b/pkg/chrootarchive/archive.go\nindex 6ff61e6a767af..83ed0c6b2feb7 100644\n--- a/pkg/chrootarchive/archive.go\n+++ b/pkg/chrootarchive/archive.go\n@@ -4,13 +4,22 @@ import (\n \t\"fmt\"\n \t\"io\"\n \t\"io/ioutil\"\n+\t\"net\"\n \t\"os\"\n+\t\"os/user\"\n \t\"path/filepath\"\n \n \t\"github.com/docker/docker/pkg/archive\"\n \t\"github.com/docker/docker/pkg/idtools\"\n )\n \n+func init() {\n+\t// initialize nss libraries in Glibc so that the dynamic libraries are loaded in the host\n+\t// environment not in the chroot from untrusted files.\n+\t_, _ = user.Lookup(\"docker\")\n+\t_, _ = net.LookupHost(\"localhost\")\n+}\n+\n // NewArchiver returns a new Archiver which uses chrootarchive.Untar\n func NewArchiver(idMapping *idtools.IdentityMapping) *archive.Archiver {\n \tif idMapping == nil {\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mqxv-9rm6-w8qc",
+  "summary": "Ech0: ParseAcceptLanguage `_` separator bypass enables ~70x CPU amplification via Accept-Language header in i18n.Middleware",
+  "severity": "high",
+  "diff": ""
+}

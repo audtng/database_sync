@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ggmv-j932-q89q",
+  "summary": "Chall-Manager's HTTP Gateway is vulnerable to DoS due to missing header timeout",
+  "severity": "high",
+  "diff": "diff --git a/server/server.go b/server/server.go\nindex cdeac64f..843ef384 100644\n--- a/server/server.go\n+++ b/server/server.go\n@@ -6,6 +6,7 @@ import (\n \t\"math\"\n \t\"net\"\n \t\"net/http\"\n+\t\"time\"\n \n \tgrpc_middleware \"github.com/grpc-ecosystem/go-grpc-middleware\"\n \t\"github.com/grpc-ecosystem/grpc-gateway/v2/runtime\"\n@@ -151,6 +152,7 @@ func (s *Server) newHTTPServer(ctx context.Context, grpcWebHandler http.Handler)\n \t\t\t\t\"application/grpc-web+proto\": grpcWebHandler,\n \t\t\t},\n \t\t},\n+\t\tReadHeaderTimeout: time.Second,\n \t}\n \n \t// Build gateway to the HTTP 1.1+JSON server\n"
+}

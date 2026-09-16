@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ccqv-43vm-4f3w",
+  "summary": "Gogs allows deletion of internal files",
+  "severity": "critical",
+  "diff": ""
+}

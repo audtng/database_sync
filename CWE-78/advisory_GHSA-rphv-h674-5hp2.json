@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rphv-h674-5hp2",
+  "summary": "Fleet Affected by Local Privilege Escalation via Tcl Command Injection in Orbit",
+  "severity": "high",
+  "diff": ""
+}

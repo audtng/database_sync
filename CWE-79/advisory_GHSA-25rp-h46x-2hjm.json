@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-25rp-h46x-2hjm",
+  "summary": "SiYuan: Electron Renderer RCE via decodeURIComponent-driven tooltip XSS in aria-label sink (incomplete fix for CVE-2026-34585)",
+  "severity": "critical",
+  "diff": ""
+}

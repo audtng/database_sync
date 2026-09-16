@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hf2g-6j7h-98wg",
+  "summary": "klever-go: Unbounded goroutine spawn on direct-message ingress enables peer-driven DoS",
+  "severity": "high",
+  "diff": ""
+}

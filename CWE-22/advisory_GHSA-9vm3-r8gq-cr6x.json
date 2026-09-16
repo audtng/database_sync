@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9vm3-r8gq-cr6x",
+  "summary": "Casdoor arbitrary file write vulnerability",
+  "severity": "critical",
+  "diff": "diff --git a/object/storage.go b/object/storage.go\nindex d1e877541cca..0625937137c9 100644\n--- a/object/storage.go\n+++ b/object/storage.go\n@@ -103,6 +103,11 @@ func uploadFile(provider *Provider, fullFilePath string, fileBuffer *bytes.Buffe\n }\n \n func UploadFileSafe(provider *Provider, fullFilePath string, fileBuffer *bytes.Buffer) (string, string, error) {\n+\t// check fullFilePath is there security issue\n+\tif strings.Contains(fullFilePath, \"..\") {\n+\t\treturn \"\", \"\", fmt.Errorf(\"the fullFilePath: %s is not allowed\", fullFilePath)\n+\t}\n+\n \tvar fileUrl string\n \tvar objectKey string\n \tvar err error\n"
+}

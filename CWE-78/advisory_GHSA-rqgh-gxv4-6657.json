@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rqgh-gxv4-6657",
+  "summary": "Gotenberg has Unauthenticated RCE via ExifTool Metadata Key Injection",
+  "severity": "critical",
+  "diff": ""
+}

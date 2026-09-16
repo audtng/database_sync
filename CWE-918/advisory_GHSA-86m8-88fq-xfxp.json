@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-86m8-88fq-xfxp",
+  "summary": "Gotenberg has an SSRF deny-list bypass in IsPublicIP via IPv6 6to4 / NAT64 / site-local prefixes",
+  "severity": "high",
+  "diff": ""
+}

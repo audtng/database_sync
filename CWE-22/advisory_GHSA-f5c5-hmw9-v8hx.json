@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f5c5-hmw9-v8hx",
+  "summary": "Unzip vulnerable to path traversal",
+  "severity": "critical",
+  "diff": "diff --git a/unzip.go b/unzip.go\nindex ae86231..38363d1 100644\n--- a/unzip.go\n+++ b/unzip.go\n@@ -12,6 +12,8 @@ import (\n \t\"path/filepath\"\n \t\"runtime\"\n \t\"time\"\n+\t\"strings\"\n+\t\"fmt\"\n )\n \n var (\n@@ -120,6 +122,9 @@ func (uz Unzip) Extract() error {\n \t\t}()\n \n \t\tpath := filepath.Join(uz.Dest, f.Name)\n+\t\tif !strings.HasPrefix(path, filepath.Clean(uz.Dest)+string(os.PathSeparator)) {\n+            return fmt.Errorf(\"%s: illegal file path\", path)\n+        }\n \n \t\tif f.FileInfo().IsDir() {\n \t\t\tos.MkdirAll(path, f.Mode())\n"
+}

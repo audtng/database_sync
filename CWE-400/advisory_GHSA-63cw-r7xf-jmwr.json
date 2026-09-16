@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-63cw-r7xf-jmwr",
+  "summary": "CoreDNS DoH GET oversized dns= query parameter causes pre-validation CPU and memory amplification",
+  "severity": "high",
+  "diff": ""
+}

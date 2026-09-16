@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j7wh-x834-p3r7",
+  "summary": "SiYuan: Authorization Bypass Allows Arbitrary SQL Execution via Search API",
+  "severity": "critical",
+  "diff": "diff --git a/kernel/api/search.go b/kernel/api/search.go\nindex a22cf25fa8f..fbb845792b7 100644\n--- a/kernel/api/search.go\n+++ b/kernel/api/search.go\n@@ -396,6 +396,14 @@ func fullTextSearchBlock(c *gin.Context) {\n \t}\n \n \tpage, pageSize, query, paths, boxes, types, method, orderBy, groupBy := parseSearchBlockArgs(arg)\n+\n+\t// SQL mode requires admin privileges, consistent with /api/query/sql\n+\tif method == 2 \u0026\u0026 !model.IsAdminRoleContext(c) {\n+\t\tret.Code = -1\n+\t\tret.Msg = \"SQL search requires administrator privileges\"\n+\t\treturn\n+\t}\n+\n \tblocks, matchedBlockCount, matchedRootCount, pageCount, docMode := model.FullTextSearchBlock(query, boxes, paths, types, method, orderBy, groupBy, page, pageSize)\n \tif model.IsReadOnlyRoleContext(c) {\n \t\tpublishAccess := model.GetPublishAccess()\n"
+}

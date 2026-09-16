@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2497-gp99-2m74",
+  "summary": "Pterodactyl endlessly reprocesses/reuploads activity log data due to SQLite max parameters limit not being considered",
+  "severity": "high",
+  "diff": ""
+}

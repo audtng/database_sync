@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9r4c-jwx3-3j76",
+  "summary": "WhoDB has a path traversal opening Sqlite3 database",
+  "severity": "critical",
+  "diff": "diff --git a/core/src/plugins/sqlite3/db.go b/core/src/plugins/sqlite3/db.go\nindex 417aeee02..4c6436fdd 100644\n--- a/core/src/plugins/sqlite3/db.go\n+++ b/core/src/plugins/sqlite3/db.go\n@@ -2,19 +2,19 @@ package sqlite3\n \n import (\n \t\"errors\"\n-\t\"os\"\n-\t\"path/filepath\"\n-\n \t\"github.com/clidey/whodb/core/src/engine\"\n \t\"github.com/clidey/whodb/core/src/env\"\n \t\"gorm.io/driver/sqlite\"\n \t\"gorm.io/gorm\"\n+\t\"os\"\n+\t\"path/filepath\"\n+\t\"strings\"\n )\n \n func getDefaultDirectory() string {\n-\tdirectory := \"/db\"\n+\tdirectory := \"/db/\"\n \tif env.IsDevelopment {\n-\t\tdirectory = \"./tmp\"\n+\t\tdirectory = \"./tmp/\"\n \t}\n \treturn directory\n }\n@@ -24,6 +24,9 @@ var errDoesNotExist = errors.New(\"unauthorized or the database doesn't exist\")\n func DB(config *engine.PluginConfig) (*gorm.DB, error) {\n \tdatabase := config.Credentials.Database\n \tfileNameDatabase := filepath.Join(getDefaultDirectory(), database)\n+\tif !strings.HasPrefix(fileNameDatabase, getDefaultDirectory()) {\n+\t\treturn nil, errDoesNotExist\n+\t}\n \tif _, err := os.Stat(fileNameDatabase); errors.Is(err, os.ErrNotExist) {\n \t\treturn nil, errDoesNotExist\n \t}\n"
+}

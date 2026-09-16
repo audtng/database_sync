@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f5mr-q85p-6hh6",
+  "summary": "Fulcio has OIDC Discovery Redirect Following Allows SSRF and JWKS Substitution for Meta-Issuer Paths, with Kubernetes Service-Account Token Leakage",
+  "severity": "high",
+  "diff": ""
+}

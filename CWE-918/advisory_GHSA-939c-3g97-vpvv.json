@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-939c-3g97-vpvv",
+  "summary": "Withdrawn Advisory: Access control issues in blackbox_exporter",
+  "severity": "high",
+  "diff": ""
+}

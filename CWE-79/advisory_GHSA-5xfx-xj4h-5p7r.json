@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5xfx-xj4h-5p7r",
+  "summary": "SiYuan: Stored XSS to RCE via attribute-view cell rendering in genAVValueHTML()",
+  "severity": "critical",
+  "diff": ""
+}

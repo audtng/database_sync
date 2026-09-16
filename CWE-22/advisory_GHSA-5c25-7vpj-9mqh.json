@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5c25-7vpj-9mqh",
+  "summary": "Nezha Monitoring: Pre-auth path traversal via /dashboard.. prefix confusion leaks jwt_secret_key",
+  "severity": "critical",
+  "diff": ""
+}

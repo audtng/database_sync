@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p3qf-84rg-jxfc",
+  "summary": "OliveTin OS Command Injection vulnerability",
+  "severity": "high",
+  "diff": ""
+}

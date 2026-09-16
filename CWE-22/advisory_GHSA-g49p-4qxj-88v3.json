@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g49p-4qxj-88v3",
+  "summary": "Note Mark: Arbitrary File Write via Path Traversal in Asset Names Leads to Remote Code Execution",
+  "severity": "high",
+  "diff": ""
+}

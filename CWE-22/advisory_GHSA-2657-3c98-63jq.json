@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2657-3c98-63jq",
+  "summary": "esm.sh has a path traversal in extractPackageTarball enables file writes from malicious packages",
+  "severity": "high",
+  "diff": "diff --git a/server/npmrc.go b/server/npmrc.go\nindex 3c8dbddcc..322614ecd 100644\n--- a/server/npmrc.go\n+++ b/server/npmrc.go\n@@ -546,7 +546,7 @@ func extractPackageTarball(installDir string, pkgName string, tarball io.Reader)\n \t\t}\n \t\t// strip tarball root dir\n \t\t_, name := utils.SplitByFirstByte(h.Name, '/')\n-\t\tfilename := path.Join(pkgDir, name)\n+\t\tfilename := path.Join(pkgDir, path.Clean(name))\n \t\tif h.Typeflag != tar.TypeReg {\n \t\t\tcontinue\n \t\t}\n"
+}

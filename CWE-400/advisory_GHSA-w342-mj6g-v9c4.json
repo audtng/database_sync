@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w342-mj6g-v9c4",
+  "summary": "Klever-Go KVM: Hash-array amplification in P2P resolver request handling",
+  "severity": "high",
+  "diff": ""
+}

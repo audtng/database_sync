@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rpcc-p8xm-rc6p",
+  "summary": "Podman vulnerable to memory-based denial of service",
+  "severity": "high",
+  "diff": ""
+}

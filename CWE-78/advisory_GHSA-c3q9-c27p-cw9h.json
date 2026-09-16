@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c3q9-c27p-cw9h",
+  "summary": "projectdiscovery/nuclei allows unsigned code template execution through workflows",
+  "severity": "high",
+  "diff": ""
+}

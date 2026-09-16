@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3v9w-6365-9w54",
+  "summary": "Dozzle: Pre-auth SSRF with response-body reflection via POST /api/notifications/test-webhook (default no-auth deploy)",
+  "severity": "high",
+  "diff": ""
+}

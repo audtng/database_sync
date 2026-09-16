@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hjh7-r5w8-5872",
+  "summary": "SiYuan: Path Traversal via Double URL Encoding in `/export/` Endpoint (Incomplete Fix Bypass for CVE-2026-30869)",
+  "severity": "high",
+  "diff": "diff --git a/kernel/server/serve.go b/kernel/server/serve.go\nindex b7f66140127..d2eb2d67bb6 100644\n--- a/kernel/server/serve.go\n+++ b/kernel/server/serve.go\n@@ -319,6 +319,11 @@ func serveExport(ginServer *gin.Engine) {\n \t\t}\n \n \t\tfullPath := filepath.Join(exportBaseDir, decodedPath)\n+\t\tif !gulu.File.IsSubPath(exportBaseDir, fullPath) {\n+\t\t\tc.Status(http.StatusUnauthorized)\n+\t\t\treturn\n+\t\t}\n+\n \t\tif util.IsSensitivePath(fullPath) {\n \t\t\tlogging.LogErrorf(\"refuse to export sensitive file [%s]\", c.Request.URL.Path)\n \t\t\tc.Status(http.StatusForbidden)\ndiff --git a/kernel/util/path.go b/kernel/util/path.go\nindex f3db6aed7d6..f59db14421a 100644\n--- a/kernel/util/path.go\n+++ b/kernel/util/path.go\n@@ -459,6 +459,11 @@ func IsSensitivePath(p string) bool {\n \t\treturn true\n \t}\n \n+\t// *.db/*.log\n+\tif strings.HasSuffix(p, \".db\") || strings.HasSuffix(p, \".log\") {\n+\t\treturn true\n+\t}\n+\n \t// 用户家目录下的敏感目录（小写比较）\n \thomePrefixes := []string{\n \t\tstrings.ToLower(filepath.Join(HomeDir, \".ssh\")),\n"
+}

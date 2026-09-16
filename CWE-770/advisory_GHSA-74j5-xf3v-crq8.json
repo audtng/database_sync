@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-74j5-xf3v-crq8",
+  "summary": "dd-trace-go: Improper parsing of W3C baggage headers may lead to DoS",
+  "severity": "high",
+  "diff": ""
+}

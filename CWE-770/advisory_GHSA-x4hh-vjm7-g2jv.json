@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-x4hh-vjm7-g2jv",
+  "summary": "Faktory Web Dashboard can lead to denial of service(DOS) via malicious user input",
+  "severity": "high",
+  "diff": ""
+}

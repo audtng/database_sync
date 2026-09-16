@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ppjg-v974-84cm",
+  "summary": "Go-Ethereum vulnerable to denial of service via malicious p2p message",
+  "severity": "high",
+  "diff": ""
+}

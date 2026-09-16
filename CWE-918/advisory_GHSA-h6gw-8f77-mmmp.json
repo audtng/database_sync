@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h6gw-8f77-mmmp",
+  "summary": "WeKnora has DNS Rebinding Vulnerability in web_fetch Tool that Allows SSRF to Internal Resources",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f5f7-6478-qm6p",
+  "summary": "Files or Directories Accessible to External Parties in kubernetes",
+  "severity": "high",
+  "diff": ""
+}

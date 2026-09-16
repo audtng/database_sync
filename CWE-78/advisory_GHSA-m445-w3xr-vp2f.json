@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m445-w3xr-vp2f",
+  "summary": "soft-serve vulnerable to arbitrary code execution by crafting git-lfs requests",
+  "severity": "high",
+  "diff": "diff --git a/pkg/ssh/cmd/git.go b/pkg/ssh/cmd/git.go\nindex f6aea60ab..d8584e451 100644\n--- a/pkg/ssh/cmd/git.go\n+++ b/pkg/ssh/cmd/git.go\n@@ -202,9 +202,6 @@ func gitRunE(cmd *cobra.Command, args []string) error {\n \t\t)\n \t}\n \n-\t// Add ssh session \u0026 config environ\n-\ts := sshutils.SessionFromContext(ctx)\n-\tenvs = append(envs, s.Environ()...)\n \tenvs = append(envs, cfg.Environ()...)\n \n \trepoPath := filepath.Join(reposDir, repoDir)\n"
+}

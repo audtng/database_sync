@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gg64-xxr9-qhjp",
+  "summary": "Gogs's update .git/config file allows remote command execution",
+  "severity": "critical",
+  "diff": ""
+}

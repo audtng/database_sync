@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-47q9-m4ww-924m",
+  "summary": "Rekor has an OOM Condition due to Unbounded gzip Decompression in Alpine APK Parsing Logic",
+  "severity": "high",
+  "diff": ""
+}

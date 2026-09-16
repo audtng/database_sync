@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wvv7-wm5v-w2gv",
+  "summary": "Osmedeus Web Server Vulnerable to Stored XSS, Leading to RCE",
+  "severity": "critical",
+  "diff": ""
+}

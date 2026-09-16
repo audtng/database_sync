@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9xc9-xq7w-vpcr",
+  "summary": "Apache ServiceComb Service-Center Server-Side Request Forgery vulnerability",
+  "severity": "high",
+  "diff": ""
+}

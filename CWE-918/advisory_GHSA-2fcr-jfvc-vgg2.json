@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2fcr-jfvc-vgg2",
+  "summary": "Gitea: Two SSRF findings",
+  "severity": "high",
+  "diff": ""
+}

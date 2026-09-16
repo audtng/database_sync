@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-42jc-v69j-g38f",
+  "summary": "Gophish contains a denial of service vulnerability",
+  "severity": "high",
+  "diff": ""
+}

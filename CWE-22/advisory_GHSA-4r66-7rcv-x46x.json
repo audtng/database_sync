@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4r66-7rcv-x46x",
+  "summary": "SiYuan vulnerable to RCE via zip slip and Command Injection via PandocBin",
+  "severity": "high",
+  "diff": ""
+}

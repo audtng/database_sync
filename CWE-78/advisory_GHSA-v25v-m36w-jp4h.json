@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v25v-m36w-jp4h",
+  "summary": "Dalfox Server Mode Vulnerable to Unauthenticated Remote Code Execution via `found-action`",
+  "severity": "critical",
+  "diff": ""
+}

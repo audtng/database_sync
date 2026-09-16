@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v9jh-j8px-98vq",
+  "summary": "go-ethereum vulnerable to denial of service via crafted GraphQL query",
+  "severity": "high",
+  "diff": ""
+}

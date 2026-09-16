@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r633-fcgp-m532",
+  "summary": "FileBrowser Quantum: Stored XSS in public share page via unsanitized share metadata (text/template misuse)",
+  "severity": "high",
+  "diff": ""
+}

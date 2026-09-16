@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-54q4-74p3-mgcw",
+  "summary": "rttys SQL Injection vulnerability",
+  "severity": "high",
+  "diff": ""
+}

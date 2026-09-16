@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jpf8-h7h7-3ppm",
+  "summary": "tar-utils Path Traversal vulnerability",
+  "severity": "critical",
+  "diff": "diff --git a/extractor.go b/extractor.go\nindex 0088c71..7266dde 100644\n--- a/extractor.go\n+++ b/extractor.go\n@@ -104,7 +104,12 @@ func (te *Extractor) Sanitize(toggle bool) {\n \n // outputPath returns the path at which to place tarPath\n func (te *Extractor) outputPath(tarPath string) (outPath string, err error) {\n-\telems := strings.Split(tarPath, \"/\")    // break into elems\n+\telems := strings.Split(tarPath, \"/\") // break into elems\n+\tfor _, e := range elems {\n+\t\tif e == \"..\" {\n+\t\t\treturn \"\", fmt.Errorf(\"%s : path contains '..'\", tarPath)\n+\t\t}\n+\t}\n \telems = elems[1:]                       // remove original root\n \toutPath = strings.Join(elems, \"/\")      // join elems\n \toutPath = gopath.Join(te.Path, outPath) // rebase on to extraction target root\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-35wr-x7v6-9fv2",
+  "summary": "Dalfox Server Mode has an Unauthenticated Arbitrary File Read with Out-of-Band Exfiltration via `custom-payload-file`",
+  "severity": "high",
+  "diff": ""
+}

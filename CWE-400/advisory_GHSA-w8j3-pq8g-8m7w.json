@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w8j3-pq8g-8m7w",
+  "summary": "iskorotkov/avro: CPU Exhaustion in Decoder",
+  "severity": "high",
+  "diff": ""
+}

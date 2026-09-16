@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c4hg-6933-x62x",
+  "summary": "Apache SkyWalking MCP: Server-Side Request Forgery via SW-URL Header in MCP Server",
+  "severity": "high",
+  "diff": ""
+}

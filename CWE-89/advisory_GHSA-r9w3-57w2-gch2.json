@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r9w3-57w2-gch2",
+  "summary": "Ory Hydra has a SQL injection via forged pagination tokens",
+  "severity": "high",
+  "diff": ""
+}

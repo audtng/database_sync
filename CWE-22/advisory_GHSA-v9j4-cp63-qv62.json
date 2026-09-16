@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v9j4-cp63-qv62",
+  "summary": "Tarslip in go-unarr",
+  "severity": "critical",
+  "diff": ""
+}

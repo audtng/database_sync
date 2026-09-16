@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f7cq-gvh6-qr25",
+  "summary": "Monitoring is vulnerable to Archive Slip due to missing checks in sanitization",
+  "severity": "high",
+  "diff": "diff --git a/pkg/extract/extract.go b/pkg/extract/extract.go\nindex e17cf6e..582e8d3 100644\n--- a/pkg/extract/extract.go\n+++ b/pkg/extract/extract.go\n@@ -245,12 +245,13 @@ func untar(r io.Reader, dest string) error {\n \treturn nil\n }\n \n-func sanitizeArchivePath(d, t string) (v string, err error) {\n-\tv = filepath.Join(d, t)\n-\tif strings.HasPrefix(v, filepath.Clean(d)) {\n-\t\treturn v, nil\n+// Based upon https://security.snyk.io/research/zip-slip-vulnerability#expandable-socPI9fFAJ-title\n+func sanitizeArchivePath(destination, filePath string) (destpath string, err error) {\n+\tdestpath = filepath.Join(destination, filePath)\n+\tif !strings.HasPrefix(destpath, filepath.Clean(destination)+string(os.PathSeparator)) {\n+\t\treturn destpath, fmt.Errorf(\"filepath is tainted: %s\", destination)\n \t}\n-\treturn \"\", fmt.Errorf(\"filepath is tainted: %s\", t)\n+\treturn\n }\n \n func ptr[T any](t T) *T {\n"
+}

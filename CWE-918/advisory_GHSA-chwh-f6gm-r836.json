@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-chwh-f6gm-r836",
+  "summary": "Gotenberg: Server-Side Request Forgery via Chromium URL Endpoint with Redirect-Based Deny-List Bypass",
+  "severity": "high",
+  "diff": ""
+}

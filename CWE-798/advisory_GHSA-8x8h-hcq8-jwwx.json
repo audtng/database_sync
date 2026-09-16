@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8x8h-hcq8-jwwx",
+  "summary": "Netmaker has Hardcoded DNS Secret Key",
+  "severity": "high",
+  "diff": "diff --git a/logic/security.go b/logic/security.go\nindex 1b57dc8b8..a6b13dbb7 100644\n--- a/logic/security.go\n+++ b/logic/security.go\n@@ -187,7 +187,7 @@ func authenticateDNSToken(tokenString string) bool {\n \tif len(tokens) \u003c 2 {\n \t\treturn false\n \t}\n-\treturn tokens[1] == servercfg.GetDNSKey()\n+\treturn len(servercfg.GetDNSKey()) \u003e 0 \u0026\u0026 tokens[1] == servercfg.GetDNSKey()\n }\n \n func ContinueIfUserMatch(next http.Handler) http.HandlerFunc {\ndiff --git a/servercfg/serverconf.go b/servercfg/serverconf.go\nindex c59253d91..1830cb661 100644\n--- a/servercfg/serverconf.go\n+++ b/servercfg/serverconf.go\n@@ -277,7 +277,7 @@ func GetMasterKey() string {\n \n // GetDNSKey - gets the configured dns key of server\n func GetDNSKey() string {\n-\tkey := \"secretkey\"\n+\tkey := \"\"\n \tif os.Getenv(\"DNS_KEY\") != \"\" {\n \t\tkey = os.Getenv(\"DNS_KEY\")\n \t} else if config.Config.Server.DNSKey != \"\" {\n"
+}

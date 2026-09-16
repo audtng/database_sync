@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qqqm-5547-774x",
+  "summary": "FileBrowser Quantum: Path traversal in public share PATCH allows file ops outside shared directory",
+  "severity": "critical",
+  "diff": ""
+}

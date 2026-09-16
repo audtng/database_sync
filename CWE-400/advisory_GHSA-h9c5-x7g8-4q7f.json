@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h9c5-x7g8-4q7f",
+  "summary": "Gitea git grep searches allow server resource exhaustion",
+  "severity": "high",
+  "diff": "diff --git a/modules/git/grep.go b/modules/git/grep.go\nindex 051a7a1d40575..47f66b88b245a 100644\n--- a/modules/git/grep.go\n+++ b/modules/git/grep.go\n@@ -11,6 +11,7 @@ import (\n \t\"slices\"\n \t\"strconv\"\n \t\"strings\"\n+\t\"time\"\n \n \t\"code.gitea.io/gitea/modules/git/gitcmd\"\n \t\"code.gitea.io/gitea/modules/util\"\n@@ -39,6 +40,10 @@ type GrepOptions struct {\n \tPathspecList      []string\n }\n \n+// grepSearchTimeout is the timeout for git grep search, it should be long enough to get results\n+// but not too long to cause performance issues\n+const grepSearchTimeout = 30 * time.Second\n+\n func GrepSearch(ctx context.Context, repo *Repository, search string, opts GrepOptions) ([]*GrepResult, error) {\n \t/*\n \t The output is like this ( \"^@\" means \\x00):\n@@ -76,6 +81,7 @@ func GrepSearch(ctx context.Context, repo *Repository, search string, opts GrepO\n \tstdoutReader, stdoutReaderClose := cmd.MakeStdoutPipe()\n \tdefer stdoutReaderClose()\n \terr := cmd.WithDir(repo.Path).\n+\t\tWithTimeout(grepSearchTimeout).\n \t\tWithPipelineFunc(func(ctx gitcmd.Context) error {\n \t\t\tisInBlock := false\n \t\t\trd := bufio.NewReaderSize(stdoutReader, util.IfZero(opts.MaxLineLength, 16*1024))\n"
+}

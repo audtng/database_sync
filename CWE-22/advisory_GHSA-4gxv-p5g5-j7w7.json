@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4gxv-p5g5-j7w7",
+  "summary": "gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-controlled path on the host",
+  "severity": "high",
+  "diff": ""
+}

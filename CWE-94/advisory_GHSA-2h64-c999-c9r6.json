@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2h64-c999-c9r6",
+  "summary": "SiYuan Affected by Stored XSS via Attribute View Name to Electron Renderer RCE",
+  "severity": "critical",
+  "diff": ""
+}

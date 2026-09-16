@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mr4h-qf9j-f665",
+  "summary": "Hashicorp Vault has Code Execution Vulnerability via Plugin Configuration",
+  "severity": "critical",
+  "diff": ""
+}

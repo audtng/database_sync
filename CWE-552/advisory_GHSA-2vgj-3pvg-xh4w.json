@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2vgj-3pvg-xh4w",
+  "summary": "Duplicate Advisory: Gogs allows deletion of internal files",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pjv4-3c63-699f",
+  "summary": "opentelemetry-collector-contrib's azureauthextension Authenticate method does not validate bearer tokens, allowing auth bypass via replay",
+  "severity": "high",
+  "diff": ""
+}

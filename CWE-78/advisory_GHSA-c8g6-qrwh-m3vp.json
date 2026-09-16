@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c8g6-qrwh-m3vp",
+  "summary": "NeuVector Enforcer is vulnerable to Command Injection and Buffer overflow",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hcm4-6hpj-vghm",
+  "summary": "Zarf's symlink targets in archives are not validated against destination directory",
+  "severity": "high",
+  "diff": ""
+}

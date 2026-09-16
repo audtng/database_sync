@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-82f7-87hm-852x",
+  "summary": "Gitea: Repository Migration Follows Git HTTP Redirects After URL Allow/Block Validation, Enabling Internal Git Repository Exfiltration",
+  "severity": "high",
+  "diff": ""
+}

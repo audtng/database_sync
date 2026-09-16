@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mf78-3rpf-r784",
+  "summary": "Anyquery: Local File Read (LFR) via Unrestricted SQLite Virtual Table Modules in Server Mode",
+  "severity": "high",
+  "diff": ""
+}

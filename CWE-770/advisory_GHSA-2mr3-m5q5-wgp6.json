@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2mr3-m5q5-wgp6",
+  "summary": "Fiber is Vulnerable to Denial of Service via Flash Cookie Unbounded Allocation",
+  "severity": "high",
+  "diff": ""
+}

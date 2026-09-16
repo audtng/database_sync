@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8hf9-3q64-q2qf",
+  "summary": "Dalfox Server Mode has an Unauthenticated Arbitrary File Create/Append via `output` Option",
+  "severity": "high",
+  "diff": ""
+}

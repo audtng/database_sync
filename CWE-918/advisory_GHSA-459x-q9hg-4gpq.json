@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-459x-q9hg-4gpq",
+  "summary": "Kyverno vulnerable to SSRF via Service Calls",
+  "severity": "high",
+  "diff": ""
+}

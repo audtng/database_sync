@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-gqfv-g4v7-m366",
+  "summary": "SiYuan: ZipSlip -\u003e Arbitrary File Overwrite -\u003e RCE",
+  "severity": "high",
+  "diff": ""
+}

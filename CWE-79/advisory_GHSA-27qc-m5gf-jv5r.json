@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-27qc-m5gf-jv5r",
+  "summary": "SiYuan Bazaar marketplace renders unescaped package `name` and `version` metadata, allowing stored XSS and Electron code execution",
+  "severity": "critical",
+  "diff": ""
+}

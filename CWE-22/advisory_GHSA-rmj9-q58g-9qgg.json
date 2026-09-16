@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rmj9-q58g-9qgg",
+  "summary": "go-unzip vulnerable to Path Traversal",
+  "severity": "critical",
+  "diff": "diff --git a/unzip.go b/unzip.go\nindex 4782040..2d14b04 100644\n--- a/unzip.go\n+++ b/unzip.go\n@@ -6,6 +6,7 @@ import (\n \t\"path/filepath\"\n \t\"io\"\n \t\"fmt\"\n+\t\"strings\"\n )\n \n type Unzip struct {\n@@ -46,6 +47,9 @@ func (uz Unzip) Extract() error {\n \t\t}()\n \n \t\tpath := filepath.Join(uz.Dest, f.Name)\n+\t\tif !strings.HasPrefix(path, filepath.Clean(uz.Dest)+string(os.PathSeparator)) {\n+            return fmt.Errorf(\"%s: Illegal file path\", path)\n+        }\n \n \t\tif f.FileInfo().IsDir() {\n \t\t\tos.MkdirAll(path, f.Mode())\n"
+}

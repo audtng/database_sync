@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9j2f-3rj3-wgpg",
+  "summary": "OpenCloud Reva has a Public Link Exploit",
+  "severity": "high",
+  "diff": "diff --git a/internal/grpc/interceptors/auth/scope.go b/internal/grpc/interceptors/auth/scope.go\nindex 32f3be1bf54..ebae7a4ad30 100644\n--- a/internal/grpc/interceptors/auth/scope.go\n+++ b/internal/grpc/interceptors/auth/scope.go\n@@ -21,6 +21,7 @@ package auth\n import (\n \t\"context\"\n \t\"fmt\"\n+\t\"path/filepath\"\n \t\"strings\"\n \t\"time\"\n \n@@ -283,8 +284,11 @@ func checkIfNestedResource(ctx context.Context, ref *provider.Reference, parent\n \t\treturn false, statuspkg.NewErrorFromCode(pathResp.Status.Code, \"auth interceptor\")\n \t}\n \tchildPath := pathResp.Path\n-\n-\treturn strings.HasPrefix(childPath, parentPath), nil\n+\trel, err := filepath.Rel(parentPath, childPath)\n+\tif err != nil {\n+\t\treturn false, err\n+\t}\n+\treturn !strings.HasPrefix(rel, \"..\"), nil\n }\n \n func extractRefFromListProvidersReq(v *registry.ListStorageProvidersRequest) (*provider.Reference, bool) {\n"
+}

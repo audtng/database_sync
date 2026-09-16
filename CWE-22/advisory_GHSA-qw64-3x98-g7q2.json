@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qw64-3x98-g7q2",
+  "summary": "go-billy has path traversal vulnerabilities",
+  "severity": "high",
+  "diff": ""
+}

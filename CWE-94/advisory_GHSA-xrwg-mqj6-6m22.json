@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xrwg-mqj6-6m22",
+  "summary": "Envoy Extension Policy lua scripts injection causes arbitrary command execution",
+  "severity": "high",
+  "diff": ""
+}

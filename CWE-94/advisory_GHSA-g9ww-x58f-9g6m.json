@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g9ww-x58f-9g6m",
+  "summary": "Contrast BadAML injection allows arbitrary code execution",
+  "severity": "high",
+  "diff": ""
+}

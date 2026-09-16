@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hwc4-gmrw-5222",
+  "summary": "Gotenberg has path traversal in zip entry name via Windows-style separators in upload filename",
+  "severity": "high",
+  "diff": ""
+}

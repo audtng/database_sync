@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7q96-f8xw-jv5j",
+  "summary": "Fleet: SQL injection in Okta conditional access endpoint allows host-controlled compromise of the Fleet database",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-cpf9-ph2j-ccr9",
+  "summary": "zrok: Unauthenticated DoS via unbounded memory allocation in striped session cookie parsing",
+  "severity": "high",
+  "diff": ""
+}

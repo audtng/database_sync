@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4r8x-2p26-976p",
+  "summary": "goproxy Denial of Service vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/https.go b/https.go\nindex 5a601a80..5238d693 100644\n--- a/https.go\n+++ b/https.go\n@@ -246,7 +246,11 @@ func (proxy *ProxyHttpServer) handleHttps(w http.ResponseWriter, r *http.Request\n \t\t\t\t\t\treturn\n \t\t\t\t\t}\n \t\t\t\t\tif err != nil {\n-\t\t\t\t\t\tctx.Warnf(\"Illegal URL %s\", \"https://\"+r.Host+req.URL.Path)\n+\t\t\t\t\t\tif req.URL != nil {\n+\t\t\t\t\t\t\tctx.Warnf(\"Illegal URL %s\", \"https://\"+r.Host+req.URL.Path)\n+\t\t\t\t\t\t} else {\n+\t\t\t\t\t\t\tctx.Warnf(\"Illegal URL %s\", \"https://\"+r.Host)\n+\t\t\t\t\t\t}\n \t\t\t\t\t\treturn\n \t\t\t\t\t}\n \t\t\t\t\tremoveProxyHeaders(ctx, req)\n"
+}

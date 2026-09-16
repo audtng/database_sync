@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8w32-6mrw-q5wv",
+  "summary": "WeKnora Vulnerable to Remote Code Execution via SQL Injection Bypass in AI Database Query Tool",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7jp5-298q-jg98",
+  "summary": "Vikunja: Stored XSS via Unsanitized SVG Attachment Upload Leads to Token Exposure",
+  "severity": "high",
+  "diff": ""
+}

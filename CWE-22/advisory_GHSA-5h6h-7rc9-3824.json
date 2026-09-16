@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5h6h-7rc9-3824",
+  "summary": "SFTP root escape via prefix-based path validation in goshs",
+  "severity": "high",
+  "diff": ""
+}

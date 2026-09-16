@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rw2c-8rfq-gwfv",
+  "summary": "Daptin: SQL injection via unvalidated goqu.L() calls in aggregate API",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5qww-56gc-f66c",
+  "summary": "GoCast OS Command Injection vulnerability",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-cqgf-f4x7-g6wc",
+  "summary": "Ech0: Unauthenticated SSRF in GetWebsiteTitle allows access to internal services and cloud metadata",
+  "severity": "high",
+  "diff": ""
+}

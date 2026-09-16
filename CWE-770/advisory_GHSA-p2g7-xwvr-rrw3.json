@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p2g7-xwvr-rrw3",
+  "summary": "Helm Controller denial of service",
+  "severity": "high",
+  "diff": ""
+}

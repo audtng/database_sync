@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9224-ggvw-wh7v",
+  "summary": "VM images built with Image Builder and Proxmox provider use default credentials in github.com/kubernetes-sigs/image-builder",
+  "severity": "critical",
+  "diff": "diff --git a/images/capi/packer/proxmox/packer.json b/images/capi/packer/proxmox/packer.json\nindex 634d19b098..fa04ae8f62 100644\n--- a/images/capi/packer/proxmox/packer.json\n+++ b/images/capi/packer/proxmox/packer.json\n@@ -148,6 +148,14 @@\n         \"kubernetes_version\": \"{{user `kubernetes_semver` | replace \\\"v\\\" \\\"\\\" 1}}\"\n       },\n       \"version\": \"{{user `goss_version`}}\"\n+    },\n+    {\n+      \"expect_disconnect\": true,\n+      \"inline\": [\n+        \"echo '{{user `ssh_password`}}' | sudo -S -E sh -c 'usermod -L {{user `ssh_username`}} \u0026\u0026 shutdown'\"\n+      ],\n+      \"inline_shebang\": \"/bin/bash -e\",\n+      \"type\": \"shell\"\n     }\n   ],\n   \"variables\": {\n"
+}

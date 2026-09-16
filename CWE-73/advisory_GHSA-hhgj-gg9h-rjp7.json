@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hhgj-gg9h-rjp7",
+  "summary": "Siyuan has an Unauthenticated Arbitrary File Read via Path Traversal",
+  "severity": "high",
+  "diff": "diff --git a/kernel/server/serve.go b/kernel/server/serve.go\nindex aedc7c03808..067637e2578 100644\n--- a/kernel/server/serve.go\n+++ b/kernel/server/serve.go\n@@ -444,6 +444,11 @@ func serveAppearance(ginServer *gin.Engine) {\n \t}\n \tsiyuan.GET(\"/appearance/*filepath\", func(c *gin.Context) {\n \t\tfilePath := filepath.Join(appearancePath, strings.TrimPrefix(c.Request.URL.Path, \"/appearance/\"))\n+\t\tif !util.IsSubPath(appearancePath, filePath) {\n+\t\t\tc.Status(http.StatusUnauthorized)\n+\t\t\treturn\n+\t\t}\n+\n \t\tif strings.HasSuffix(c.Request.URL.Path, \"/theme.js\") {\n \t\t\tif !gulu.File.IsExist(filePath) {\n \t\t\t\t// 主题 js 不存在时生成空内容返回\n"
+}

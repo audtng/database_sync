@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pm6v-2h4w-4rp2",
+  "summary": "Gogs: Overwriting critical files results in a denial of service",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7x9r-wcgg-w86f",
+  "summary": "Hashicorp Boundary workers are vulnerable to a denial-of-service condition during node enrollment TLS handshakes",
+  "severity": "high",
+  "diff": ""
+}

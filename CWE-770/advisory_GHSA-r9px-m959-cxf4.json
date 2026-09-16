@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r9px-m959-cxf4",
+  "summary": "go-git clients vulnerable to DoS via maliciously crafted Git server replies",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v7xq-3wx6-fqc2",
+  "summary": "In monetr, unauthenticated Stripe webhook reads attacker-sized request bodies before signature validation",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-75jf-52jg-qqh4",
+  "summary": "SQL injection in github.com/stashapp/stash",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p799-g7vv-f279",
+  "summary": " Romeo is vulnerable to Archive Slip due to missing checks in sanitization",
+  "severity": "high",
+  "diff": "diff --git a/webserver/api/v1/decoder.go b/webserver/api/v1/decoder.go\nindex 2faa6f08..c74fcda6 100644\n--- a/webserver/api/v1/decoder.go\n+++ b/webserver/api/v1/decoder.go\n@@ -77,14 +77,15 @@ func (dec *Decompressor) Unzip(r *zip.Reader, cd string) (string, error) {\n \treturn outDir, nil\n }\n \n-func sanitizeArchivePath(d, t string) (v string, err error) {\n-\tv = filepath.Join(d, t)\n-\tif strings.HasPrefix(v, filepath.Clean(d)) {\n-\t\treturn v, nil\n-\t}\n-\treturn \"\", \u0026ErrPathTainted{\n-\t\tPath: t,\n+// Based upon https://security.snyk.io/research/zip-slip-vulnerability#expandable-socPI9fFAJ-title\n+func sanitizeArchivePath(destination, filePath string) (destpath string, err error) {\n+\tdestpath = filepath.Join(destination, filePath)\n+\tif !strings.HasPrefix(destpath, filepath.Clean(destination)+string(os.PathSeparator)) {\n+\t\treturn destpath, \u0026ErrPathTainted{\n+\t\t\tPath: destination,\n+\t\t}\n \t}\n+\treturn\n }\n \n func (dec *Decompressor) copyTo(f *zip.File, filePath string) error {\n"
+}

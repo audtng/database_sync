@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2hfj-cxw7-g45p",
+  "summary": "Unsafe inline XSS in pasting DOM element into chat",
+  "severity": "high",
+  "diff": ""
+}

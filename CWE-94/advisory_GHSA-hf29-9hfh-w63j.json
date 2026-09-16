@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hf29-9hfh-w63j",
+  "summary": "Duplicate Advisory: Gogs allows argument injection during the previewing of changes",
+  "severity": "critical",
+  "diff": ""
+}

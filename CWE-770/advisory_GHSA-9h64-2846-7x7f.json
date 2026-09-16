@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9h64-2846-7x7f",
+  "summary": "Axonflow fixed bugs by implementing multi-tenant isolation and access-control hardening",
+  "severity": "critical",
+  "diff": ""
+}

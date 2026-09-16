@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q27h-hw2v-x5jm",
+  "summary": "Free5gc allows a local attacker to cause a denial of service via the free5gc-compose component",
+  "severity": "high",
+  "diff": ""
+}

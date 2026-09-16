@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xmw9-6r43-x9ww",
+  "summary": "SiYuan has directory traversal within its publishing service",
+  "severity": "critical",
+  "diff": ""
+}

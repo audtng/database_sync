@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7gc4-r5jr-9hxv",
+  "summary": "Gin-vue-admin subject to Remote Code Execution via file upload vulnerability",
+  "severity": "critical",
+  "diff": ""
+}

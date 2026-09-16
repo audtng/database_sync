@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-449p-3h89-pw88",
+  "summary": "Maliciously crafted Git server replies can lead to path traversal and RCE on go-git clients",
+  "severity": "critical",
+  "diff": ""
+}

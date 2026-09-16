@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5824-6jfv-xr3r",
+  "summary": "Arbitrary file read in ginadmin",
+  "severity": "high",
+  "diff": ""
+}

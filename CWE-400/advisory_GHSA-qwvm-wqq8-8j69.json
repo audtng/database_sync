@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qwvm-wqq8-8j69",
+  "summary": "github.com/MANTRA-Chain/mantrachain/x/tokenfactory tx gas limit is not enforced in send hooks",
+  "severity": "high",
+  "diff": "diff --git a/x/tokenfactory/keeper/before_send.go b/x/tokenfactory/keeper/before_send.go\nindex f3c235402..5c6dd68c9 100644\n--- a/x/tokenfactory/keeper/before_send.go\n+++ b/x/tokenfactory/keeper/before_send.go\n@@ -127,7 +127,8 @@ func (k Keeper) callBeforeSendListener(ctx context.Context, from, to sdk.AccAddr\n \t\t\t}\n \t\t\tem := sdk.NewEventManager()\n \n-\t\t\tchildCtx := c.WithGasMeter(types2.NewGasMeter(types.BeforeSendHookGasLimit))\n+\t\t\tnewGasLimit := min(types.BeforeSendHookGasLimit, c.GasMeter().GasRemaining())\n+\t\t\tchildCtx := c.WithGasMeter(types2.NewGasMeter(newGasLimit))\n \t\t\t_, err = k.contractKeeper.Sudo(childCtx.WithEventManager(em), cwAddr, msgBz)\n \t\t\tif err != nil {\n \t\t\t\treturn errorsmod.Wrapf(err, \"failed to call before send hook for denom %s\", coin.Denom)\n"
+}

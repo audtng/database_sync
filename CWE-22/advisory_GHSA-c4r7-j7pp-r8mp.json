@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c4r7-j7pp-r8mp",
+  "summary": "Mattermost has a Path Traversal issue",
+  "severity": "high",
+  "diff": ""
+}

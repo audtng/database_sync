@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rm4c-xj6x-49mw",
+  "summary": "Gotenberg has a Server-Side Request Forgery (SSRF) Issue",
+  "severity": "high",
+  "diff": ""
+}

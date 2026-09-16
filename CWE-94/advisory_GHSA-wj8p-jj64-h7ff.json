@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wj8p-jj64-h7ff",
+  "summary": "Arbitrary WASM Code Execution via AnnotationOverrideFlight Injection in Yoke ATC",
+  "severity": "high",
+  "diff": ""
+}

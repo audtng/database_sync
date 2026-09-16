@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jvpw-637p-h3pw",
+  "summary": "File Browser has a Command Injection via Hook Runner",
+  "severity": "high",
+  "diff": ""
+}

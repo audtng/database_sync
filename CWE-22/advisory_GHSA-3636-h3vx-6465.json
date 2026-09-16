@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3636-h3vx-6465",
+  "summary": "esm.sh: Legacy Route Path Traversal Can Lead to RCE",
+  "severity": "high",
+  "diff": ""
+}

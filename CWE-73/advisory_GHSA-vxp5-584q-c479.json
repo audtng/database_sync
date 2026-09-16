@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vxp5-584q-c479",
+  "summary": "Incus has arbitrary file read+write on host via templates/ symlink in malicious image",
+  "severity": "critical",
+  "diff": ""
+}

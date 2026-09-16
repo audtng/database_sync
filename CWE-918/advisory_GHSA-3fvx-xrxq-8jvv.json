@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3fvx-xrxq-8jvv",
+  "summary": "soft-serve vulnerable to SSRF via unvalidated LFS endpoint in repo import",
+  "severity": "critical",
+  "diff": "diff --git a/pkg/ssrf/ssrf.go b/pkg/ssrf/ssrf.go\nindex 1ed96bd8f..6a94d72e5 100644\n--- a/pkg/ssrf/ssrf.go\n+++ b/pkg/ssrf/ssrf.go\n@@ -39,7 +39,14 @@ func NewSecureClient() *http.Client {\n \n \t\t\t\tip := net.ParseIP(host)\n \t\t\t\tif ip == nil {\n-\t\t\t\t\treturn nil, fmt.Errorf(\"unexpected non-IP address in dial: %s\", host)\n+\t\t\t\t\tips, err := net.LookupIP(host) //nolint\n+\t\t\t\t\tif err != nil {\n+\t\t\t\t\t\treturn nil, fmt.Errorf(\"DNS resolution failed for host %s: %v\", host, err)\n+\t\t\t\t\t}\n+\t\t\t\t\tif len(ips) == 0 {\n+\t\t\t\t\t\treturn nil, fmt.Errorf(\"no IP addresses found for host: %s\", host)\n+\t\t\t\t\t}\n+\t\t\t\t\tip = ips[0] // Use the first resolved IP address\n \t\t\t\t}\n \t\t\t\tif isPrivateOrInternal(ip) {\n \t\t\t\t\treturn nil, fmt.Errorf(\"%w\", ErrPrivateIP)\n"
+}

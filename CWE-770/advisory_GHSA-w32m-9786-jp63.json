@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w32m-9786-jp63",
+  "summary": "Non-linear parsing of case-insensitive content in golang.org/x/net/html",
+  "severity": "high",
+  "diff": ""
+}

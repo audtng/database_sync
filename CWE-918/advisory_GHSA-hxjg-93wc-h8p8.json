@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hxjg-93wc-h8p8",
+  "summary": "Komari: Management Interface CSRF",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qqq4-5773-pmw5",
+  "summary": "uniget is Vulnerable to Command Injection in tool.Check Leading to Arbitrary Code Execution",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-88v5-9hxc-f85r",
+  "summary": "HashiCorp Vault Vulnerable to Denial-of-Service via Unauthenticated Root Token Generation/Rekey Operations",
+  "severity": "high",
+  "diff": ""
+}

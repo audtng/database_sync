@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hfrg-4jwr-jfpj",
+  "summary": "Improper HTML sanitization in ZITADEL",
+  "severity": "high",
+  "diff": "diff --git a/internal/renderer/renderer.go b/internal/renderer/renderer.go\nindex d9e4a44ef56..cc4d1c6ccfc 100644\n--- a/internal/renderer/renderer.go\n+++ b/internal/renderer/renderer.go\n@@ -2,10 +2,10 @@ package renderer\n \n import (\n \t\"context\"\n+\t\"html/template\"\n \t\"io/ioutil\"\n \t\"net/http\"\n \t\"os\"\n-\t\"text/template\"\n \n \t\"github.com/zitadel/logging\"\n \t\"golang.org/x/text/language\"\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-98cp-84m9-q3qp",
+  "summary": "free5GC PCF: Memory Leak via CORS Middleware Registration in HTTP Handler Leads to Denial of Service",
+  "severity": "high",
+  "diff": ""
+}

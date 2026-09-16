@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wx43-g55g-2jf4",
+  "summary": "LocalAI Command Injection in audioToWav",
+  "severity": "critical",
+  "diff": ""
+}

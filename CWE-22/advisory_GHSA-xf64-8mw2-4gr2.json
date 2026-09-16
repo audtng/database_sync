@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xf64-8mw2-4gr2",
+  "summary": "Traefik has a StripPrefix Route-Level Auth Bypass via Path Normalization",
+  "severity": "high",
+  "diff": ""
+}

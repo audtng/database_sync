@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4374-p667-p6c8",
+  "summary": "HTTP/2 rapid reset can cause excessive work in net/http",
+  "severity": "high",
+  "diff": ""
+}

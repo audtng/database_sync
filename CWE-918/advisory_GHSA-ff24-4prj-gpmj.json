@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ff24-4prj-gpmj",
+  "summary": "Arcane has Unauthenticated SSRF with Conditional Response Reflection in Template Fetch Endpoint",
+  "severity": "high",
+  "diff": ""
+}

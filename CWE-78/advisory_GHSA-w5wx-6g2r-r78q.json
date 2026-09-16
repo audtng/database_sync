@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w5wx-6g2r-r78q",
+  "summary": "Nuclei allows unsigned code template execution through workflows",
+  "severity": "high",
+  "diff": "diff --git a/pkg/templates/workflows.go b/pkg/templates/workflows.go\nindex 94e2c11c9b..77e955c1a9 100644\n--- a/pkg/templates/workflows.go\n+++ b/pkg/templates/workflows.go\n@@ -80,6 +80,16 @@ func parseWorkflowTemplate(workflow *workflows.WorkflowTemplate, preprocessor Pr\n \t\t\tgologger.Warning().Msgf(\"Could not parse workflow template %s: no executer found\\n\", path)\n \t\t\tcontinue\n \t\t}\n+\t\tif len(template.RequestsCode) \u003e 0 {\n+\t\t\tif !options.Options.EnableCodeTemplates {\n+\t\t\t\tgologger.Warning().Msgf(\"`-code` flag not found, skipping code template from workflow: %v\\n\", path)\n+\t\t\t\tcontinue\n+\t\t\t} else if !template.Verified {\n+\t\t\t\t// unverfied code templates are not allowed in workflows\n+\t\t\t\tgologger.Warning().Msgf(\"skipping unverified code template from workflow: %v\\n\", path)\n+\t\t\t\tcontinue\n+\t\t\t}\n+\t\t}\n \t\tworkflowTemplates = append(workflowTemplates, template)\n \t}\n \n"
+}

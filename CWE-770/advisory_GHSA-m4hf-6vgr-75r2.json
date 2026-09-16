@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m4hf-6vgr-75r2",
+  "summary": "K3s apiserver port is vulnerable to unauthenticated remote denial-of-service (DoS) attack via TLS SAN stuffing attack",
+  "severity": "high",
+  "diff": ""
+}

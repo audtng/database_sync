@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qw5r-ppcg-f8rj",
+  "summary": "MKP: Unbounded Pod Log Read via Attacker-Controlled `limitBytes`/`tailLines` Causes Memory Exhaustion",
+  "severity": "high",
+  "diff": ""
+}

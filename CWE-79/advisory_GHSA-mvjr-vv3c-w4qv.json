@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mvjr-vv3c-w4qv",
+  "summary": "SiYuan: Stored XSS to RCE via CSS-snippet \u003cstyle\u003e breakout in renderSnippet()",
+  "severity": "critical",
+  "diff": ""
+}

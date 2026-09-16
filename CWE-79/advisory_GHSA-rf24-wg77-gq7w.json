@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rf24-wg77-gq7w",
+  "summary": "listmonk: CSRF to XSS Chain can Lead to Admin Account Takeover",
+  "severity": "high",
+  "diff": ""
+}

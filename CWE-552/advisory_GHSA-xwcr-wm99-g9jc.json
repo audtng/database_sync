@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xwcr-wm99-g9jc",
+  "summary": "Algernon: handler.lua discovery walks parent directories above the server root",
+  "severity": "critical",
+  "diff": ""
+}

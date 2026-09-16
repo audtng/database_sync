@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4mx9-3c2h-hwhg",
+  "summary": "SiYuan has a SanitizeSVG bypass via data:text/xml in getDynamicIcon (incomplete fix for CVE-2026-29183)",
+  "severity": "critical",
+  "diff": "diff --git a/kernel/util/misc.go b/kernel/util/misc.go\nindex 3b6adeb5d3f..a8218c30717 100644\n--- a/kernel/util/misc.go\n+++ b/kernel/util/misc.go\n@@ -285,9 +285,13 @@ func SanitizeSVG(svgInput string) string {\n \t\t\t\t\t\t\tif strings.HasPrefix(val, \"javascript:\") {\n \t\t\t\t\t\t\t\tcontinue\n \t\t\t\t\t\t\t}\n-\t\t\t\t\t\t\t// 对 data: 做保守处理，删除包含可执行内容的 data:text/html 或 data:image/svg+xml\n+\t\t\t\t\t\t\t// 对 data: 做保守处理，只允许常见安全的图片格式（png/jpeg/gif/webp）\n \t\t\t\t\t\t\tif strings.HasPrefix(val, \"data:\") {\n-\t\t\t\t\t\t\t\tif strings.Contains(val, \"text/html\") || strings.Contains(val, \"image/svg+xml\") || strings.Contains(val, \"application/xhtml+xml\") {\n+\t\t\t\t\t\t\t\tsafe := strings.HasPrefix(val, \"data:image/png\") ||\n+\t\t\t\t\t\t\t\t\tstrings.HasPrefix(val, \"data:image/jpeg\") ||\n+\t\t\t\t\t\t\t\t\tstrings.HasPrefix(val, \"data:image/gif\") ||\n+\t\t\t\t\t\t\t\t\tstrings.HasPrefix(val, \"data:image/webp\")\n+\t\t\t\t\t\t\t\tif !safe {\n \t\t\t\t\t\t\t\t\tcontinue\n \t\t\t\t\t\t\t\t}\n \t\t\t\t\t\t\t}\n"
+}

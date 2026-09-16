@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wr32-99hh-6f35",
+  "summary": "Nginx-UI has Server-Side Request Forgery (SSRF) via Cluster Proxy Middleware that Allows Access to Internal Services",
+  "severity": "high",
+  "diff": ""
+}

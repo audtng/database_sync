@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m6m5-pp4g-fcc8",
+  "summary": "S3 storage write is not aborted on errors leading to unbounded memory usage",
+  "severity": "high",
+  "diff": ""
+}

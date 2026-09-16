@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v5c3-6wvc-pc2q",
+  "summary": "QuantumNous/new-api has an SSRF Filter Bypass via 0.0.0.0",
+  "severity": "high",
+  "diff": ""
+}

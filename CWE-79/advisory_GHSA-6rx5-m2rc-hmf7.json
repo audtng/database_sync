@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6rx5-m2rc-hmf7",
+  "summary": "ZITADEL: Stored XSS via Default URI Redirect Leads to Account Takeover",
+  "severity": "high",
+  "diff": ""
+}

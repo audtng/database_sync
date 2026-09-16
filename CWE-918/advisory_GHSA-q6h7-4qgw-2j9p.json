@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q6h7-4qgw-2j9p",
+  "summary": "Hashicorp Consul HTTP health check endpoints returning an HTTP redirect may be abused as SSRF vector",
+  "severity": "high",
+  "diff": ""
+}

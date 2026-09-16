@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3r32-cp7v-5wq4",
+  "summary": "Code injection in ansible semaphore",
+  "severity": "high",
+  "diff": ""
+}

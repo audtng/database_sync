@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ccjc-4qc3-jxqc",
+  "summary": "Incus has an arbitrary file write via path traversal in S3 multipart upload",
+  "severity": "critical",
+  "diff": ""
+}

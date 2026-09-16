@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q675-qj96-32m9",
+  "summary": "golang.org/x/image/tiff has excessive resource consumption in PackBits decompression",
+  "severity": "high",
+  "diff": ""
+}

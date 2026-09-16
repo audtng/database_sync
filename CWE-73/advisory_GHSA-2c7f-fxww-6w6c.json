@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2c7f-fxww-6w6c",
+  "summary": "yutu: Arbitrary File Write via MCP `caption-download` Tool",
+  "severity": "high",
+  "diff": "diff --git a/pkg/caption/caption.go b/pkg/caption/caption.go\nindex 69b3ed3a..4e6358dd 100644\n--- a/pkg/caption/caption.go\n+++ b/pkg/caption/caption.go\n@@ -269,7 +269,7 @@ func (c *Caption) Download(writer io.Writer) error {\n \t\treturn errors.Join(errDownloadCaption, err)\n \t}\n \n-\tfile, err := os.Create(c.File)\n+\tfile, err := pkg.Root.OpenFile(c.File, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)\n \tif err != nil {\n \t\treturn errors.Join(errDownloadCaption, err)\n \t}\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qrp7-cvwr-j2c6",
+  "summary": "Caddy: Windows `file_server` path authorization bypass via encoded backslash",
+  "severity": "high",
+  "diff": ""
+}

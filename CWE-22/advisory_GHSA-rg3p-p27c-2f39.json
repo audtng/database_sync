@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rg3p-p27c-2f39",
+  "summary": "gohttp is vulnerable to directory traversal via a crafted request",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2q3f-q5pq-g8wv",
+  "summary": "Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image",
+  "severity": "critical",
+  "diff": ""
+}

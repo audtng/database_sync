@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pqhx-w72w-m393",
+  "summary": "ntfy.sh allows a remote attacker to execute arbitrary code via the parseActions function",
+  "severity": "critical",
+  "diff": ""
+}

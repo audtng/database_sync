@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wc4h-2348-jc3p",
+  "summary": "Ech0 has Unauthenticated Server-Side Request Forgery in Website Preview Feature",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qh5x-rfwf-rvfv",
+  "summary": "Hysteria vulnerable to server crash when max_datagram_frame_size very small",
+  "severity": "high",
+  "diff": ""
+}

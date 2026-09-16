@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7j59-v9qr-6fq9",
+  "summary": "Kiota abstractions RedirectHandler leaks Cookie/Proxy-Authorization headers on cross-host redirect",
+  "severity": "high",
+  "diff": ""
+}

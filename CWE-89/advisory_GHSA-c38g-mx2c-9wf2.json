@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c38g-mx2c-9wf2",
+  "summary": "Ory Keto has a SQL injection via forged pagination tokens",
+  "severity": "high",
+  "diff": ""
+}

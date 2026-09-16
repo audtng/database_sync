@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9jcx-pr2f-qvq5",
+  "summary": "miekg/dns parsing error leads to nil pointer dereference and DoS",
+  "severity": "high",
+  "diff": "diff --git a/scan_rr.go b/scan_rr.go\nindex e9556282d..67f884b0d 100644\n--- a/scan_rr.go\n+++ b/scan_rr.go\n@@ -1665,9 +1665,9 @@ func setTA(h RR_Header, c chan lex, o, f string) (RR, *ParseError, string) {\n \t\treturn nil, \u0026ParseError{f, \"bad TA DigestType\", l}, \"\"\n \t}\n \trr.DigestType = uint8(i)\n-\ts, e, c1 := endingToString(c, \"bad TA Digest\", f)\n-\tif e != nil {\n-\t\treturn nil, e.(*ParseError), c1\n+\ts, err, c1 := endingToString(c, \"bad TA Digest\", f)\n+\tif err != nil {\n+\t\treturn nil, err, c1\n \t}\n \trr.Digest = s\n \treturn rr, nil, c1\ndiff --git a/scan_test.go b/scan_test.go\nindex 88baa602c..c4449d9ba 100644\n--- a/scan_test.go\n+++ b/scan_test.go\n@@ -79,3 +79,13 @@ func TestParseZoneInclude(t *testing.T) {\n \t\t}\n \t}\n }\n+\n+func TestParseTA(t *testing.T) {\n+\trr, err := NewRR(` Ta 0 0 0`)\n+\tif err != nil {\n+\t\tt.Fatalf(\"expected no error, but got %s\", err)\n+\t}\n+\tif rr == nil {\n+\t\tt.Fatal(`expected a normal RR, but got nil`)\n+\t}\n+}\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f2hj-vpp9-6vm2",
+  "summary": "NSSF panic due to nil pointer dereference when expiry field is omitted in NSSAIAvailability POST",
+  "severity": "high",
+  "diff": "diff --git a/internal/sbi/processor/nssaiavailability_subscription.go b/internal/sbi/processor/nssaiavailability_subscription.go\nindex 4b5b544..5bfcfc7 100644\n--- a/internal/sbi/processor/nssaiavailability_subscription.go\n+++ b/internal/sbi/processor/nssaiavailability_subscription.go\n@@ -77,7 +77,7 @@ func (p *Processor) NssaiAvailabilitySubscriptionCreate(\n \tfactory.NssfConfig.Subscriptions = append(factory.NssfConfig.Subscriptions, subscription)\n \n \tresponse.SubscriptionId = subscription.SubscriptionId\n-\tif !subscription.SubscriptionData.Expiry.IsZero() {\n+\tif subscription.SubscriptionData.Expiry != nil \u0026\u0026 !subscription.SubscriptionData.Expiry.IsZero() {\n \t\tresponse.Expiry = new(time.Time)\n \t\t*response.Expiry = *subscription.SubscriptionData.Expiry\n \t}\n"
+}

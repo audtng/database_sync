@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j77r-2fxf-5jrw",
+  "summary": "Improper path handling in kustomization files allows path traversal",
+  "severity": "critical",
+  "diff": ""
+}

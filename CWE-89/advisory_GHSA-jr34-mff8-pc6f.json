@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jr34-mff8-pc6f",
+  "summary": "SQL Injection in Cloud Native Computing Foundation Harbor",
+  "severity": "high",
+  "diff": ""
+}

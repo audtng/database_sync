@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jc3j-x6pg-4hmv",
+  "summary": "Algernon: Host header path traversal in --domain mode reads files and runs Lua from parent dir",
+  "severity": "high",
+  "diff": ""
+}

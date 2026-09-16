@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jxqv-jcvh-7gr4",
+  "summary": "Atlantis Events vulnerable to Timing Attack",
+  "severity": "high",
+  "diff": "diff --git a/server/controllers/events/gitlab_request_parser_validator.go b/server/controllers/events/gitlab_request_parser_validator.go\nindex 9755bd5d9e..b92fd4df81 100644\n--- a/server/controllers/events/gitlab_request_parser_validator.go\n+++ b/server/controllers/events/gitlab_request_parser_validator.go\n@@ -14,6 +14,7 @@\n package events\n \n import (\n+\t\"crypto/subtle\"\n \t\"encoding/json\"\n \t\"fmt\"\n \t\"io\"\n@@ -61,8 +62,7 @@ func (d *DefaultGitlabRequestParserValidator) ParseAndValidate(r *http.Request,\n \n \t// Validate secret if specified.\n \theaderSecret := r.Header.Get(secretHeader)\n-\tsecretStr := string(secret)\n-\tif len(secret) != 0 \u0026\u0026 headerSecret != secretStr {\n+\tif len(secret) != 0 \u0026\u0026 subtle.ConstantTimeCompare(secret, []byte(headerSecret)) != 1 {\n \t\treturn nil, fmt.Errorf(\"header %s=%s did not match expected secret\", secretHeader, headerSecret)\n \t}\n \n"
+}

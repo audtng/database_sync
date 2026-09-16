@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jg56-wf8x-qrv5",
+  "summary": "goshs: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in goshs POST multipart upload",
+  "severity": "critical",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fpxj-m5q8-fphw",
+  "summary": "Mailpit: Unauthenticated remote memory-exhaustion DoS via unlimited SMTP DATA and /api/v1/send body sizes",
+  "severity": "high",
+  "diff": ""
+}

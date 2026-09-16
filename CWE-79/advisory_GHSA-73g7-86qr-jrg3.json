@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-73g7-86qr-jrg3",
+  "summary": "SiYuan vulnerable to reflected XSS via SVG namespace prefix bypass in SanitizeSVG (getDynamicIcon, unauthenticated)",
+  "severity": "high",
+  "diff": ""
+}

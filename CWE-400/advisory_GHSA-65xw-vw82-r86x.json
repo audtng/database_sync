@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-65xw-vw82-r86x",
+  "summary": "XPath: Boolean expression infinite loop leads to denial of service via CPU exhaustion",
+  "severity": "high",
+  "diff": "diff --git a/query.go b/query.go\nindex 2a71734..8c5535e 100644\n--- a/query.go\n+++ b/query.go\n@@ -985,15 +985,6 @@ type logicalQuery struct {\n }\n \n func (l *logicalQuery) Select(t iterator) NodeNavigator {\n-\t// When a XPath expr is logical expression.\n-\tnode := t.Current().Copy()\n-\tval := l.Evaluate(t)\n-\tswitch val.(type) {\n-\tcase bool:\n-\t\tif val.(bool) == true {\n-\t\t\treturn node\n-\t\t}\n-\t}\n \treturn nil\n }\n \n"
+}

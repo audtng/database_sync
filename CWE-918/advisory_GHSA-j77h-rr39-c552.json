@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-j77h-rr39-c552",
+  "summary": "Centrifugo: SSRF via unverified JWT claims interpolated into dynamic JWKS endpoint URL",
+  "severity": "critical",
+  "diff": ""
+}

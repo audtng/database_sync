@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-652r-q29p-m25h",
+  "summary": "Meshery SQL Injection vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/server/handlers/meshsync_handler.go b/server/handlers/meshsync_handler.go\nindex 7497e7ef4e310..6798b037f4c78 100644\n--- a/server/handlers/meshsync_handler.go\n+++ b/server/handlers/meshsync_handler.go\n@@ -132,6 +132,7 @@ func (h *Handler) GetMeshSyncResources(rw http.ResponseWriter, r *http.Request,\n \t\tresult = result.Offset(offset)\n \t}\n \n+\torder = models.SanitizeOrderInput(order, []string{\"created_at\", \"updated_at\", \"name\"})\n \tif order != \"\" {\n \t\tif sort == \"desc\" {\n \t\t\tresult = result.Order(clause.OrderByColumn{Column: clause.Column{Name: order}, Desc: true})\n"
+}

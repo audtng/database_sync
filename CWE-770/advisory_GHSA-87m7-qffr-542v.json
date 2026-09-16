@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-87m7-qffr-542v",
+  "summary": "Klever-Go MultiDataInterceptor has remote OOM via crafted compressed P2P payload",
+  "severity": "high",
+  "diff": ""
+}

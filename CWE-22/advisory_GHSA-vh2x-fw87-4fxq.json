@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vh2x-fw87-4fxq",
+  "summary": "DPanel has an arbitrary file deletion vulnerability in /api/common/attach/delete interface",
+  "severity": "high",
+  "diff": "diff --git a/app/common/http/controller/attach.go b/app/common/http/controller/attach.go\nindex 80e23ca6..8c5ea908 100644\n--- a/app/common/http/controller/attach.go\n+++ b/app/common/http/controller/attach.go\n@@ -1,7 +1,6 @@\n package controller\n \n import (\n-\t\"fmt\"\n \t\"log/slog\"\n \t\"os\"\n \t\"path/filepath\"\n@@ -51,11 +50,21 @@ func (self Attach) Delete(http *gin.Context) {\n \tif !self.Validate(http, \u0026params) {\n \t\treturn\n \t}\n+\tif !filepath.IsLocal(params.Path) {\n+\t\tself.JsonResponseWithError(http, function.ErrorMessage(define.ErrorMessageCommonDataNotFoundOrDeleted), 500)\n+\t\treturn\n+\t}\n+\tparams.Path = filepath.Clean(params.Path)\n \tpath := storage.Local{}.GetSaveRealPath(params.Path)\n-\tfmt.Printf(\"%v \\n\", path)\n \t_, err := os.Stat(path)\n-\tif err == nil {\n-\t\tos.Remove(path)\n+\tif err != nil {\n+\t\tself.JsonResponseWithError(http, err, 500)\n+\t\treturn\n+\t}\n+\terr = os.Remove(path)\n+\tif err != nil {\n+\t\tself.JsonResponseWithError(http, err, 500)\n+\t\treturn\n \t}\n \tself.JsonSuccessResponse(http)\n \treturn\n"
+}

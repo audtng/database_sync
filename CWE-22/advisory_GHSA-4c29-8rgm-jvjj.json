@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4c29-8rgm-jvjj",
+  "summary": "BuildKit's Malicious frontend can cause file escape outside of storage root",
+  "severity": "high",
+  "diff": ""
+}

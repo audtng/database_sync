@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w2hg-2v4p-vmh6",
+  "summary": "Canonical LXD Arbitrary File Read via Template Injection in Snapshot Patterns",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w7cg-whh7-xp28",
+  "summary": "SiYuan: Stored XSS in Bazaar marketplace via package README event handlers",
+  "severity": "high",
+  "diff": ""
+}

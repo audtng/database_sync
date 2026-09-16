@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-f396-4rp4-7v2j",
+  "summary": "Boxlite: Path Traversal Vulnerability Leads to Arbitrary File Write on the Host",
+  "severity": "critical",
+  "diff": ""
+}

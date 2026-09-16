@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g743-m6x3-v6wm",
+  "summary": "linx-server has an issue in the uploadPostHandler component that allows attackers to cause a Denial of Service (DoS) via a crafted POST request",
+  "severity": "high",
+  "diff": ""
+}

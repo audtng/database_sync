@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7hp6-g3pq-3pc3",
+  "summary": "nebula-mesh: Host advanced overrides allow YAML injection into agent config.yml",
+  "severity": "high",
+  "diff": ""
+}

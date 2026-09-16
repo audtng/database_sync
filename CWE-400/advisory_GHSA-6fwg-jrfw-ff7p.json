@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6fwg-jrfw-ff7p",
+  "summary": "Traefik docker container using 100% CPU",
+  "severity": "high",
+  "diff": ""
+}

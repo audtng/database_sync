@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6p5q-h963-pwwf",
+  "summary": "Apache AGE: Python and Golang drivers allow data manipulation and exposure due to SQL injection",
+  "severity": "high",
+  "diff": ""
+}

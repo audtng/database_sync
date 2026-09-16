@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5hf2-vhj6-gj9m",
+  "summary": "nginx-UI has Unencrypted Storage of DNS API Tokens and ACME Private Keys",
+  "severity": "high",
+  "diff": ""
+}

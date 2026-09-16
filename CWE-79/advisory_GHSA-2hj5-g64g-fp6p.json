@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2hj5-g64g-fp6p",
+  "summary": "Argo CD allows cross-site scripting on repositories page",
+  "severity": "critical",
+  "diff": "diff --git a/ui/src/app/shared/components/urls.ts b/ui/src/app/shared/components/urls.ts\nindex ab68e6424ba86..27defb509bca0 100644\n--- a/ui/src/app/shared/components/urls.ts\n+++ b/ui/src/app/shared/components/urls.ts\n@@ -1,5 +1,6 @@\n import {GitUrl} from 'git-url-parse';\n import {isSHA} from './revision';\n+import {isValidURL} from '../../shared/utils';\n \n const GitUrlParse = require('git-url-parse');\n \n@@ -19,7 +20,11 @@ export function repoUrl(url: string): string {\n             return null;\n         }\n \n-        return `${protocol(parsed.protocol)}://${parsed.resource}/${parsed.owner}/${parsed.name}`;\n+        const parsedUrl = `${protocol(parsed.protocol)}://${parsed.resource}/${parsed.owner}/${parsed.name}`;\n+        if (!isValidURL(parsedUrl)) {\n+            return null;\n+        }\n+        return parsedUrl;\n     } catch {\n         return null;\n     }\n"
+}

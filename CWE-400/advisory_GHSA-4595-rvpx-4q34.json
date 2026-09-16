@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4595-rvpx-4q34",
+  "summary": "emp3r0r has an unauthenticated HTTP Polling DoS",
+  "severity": "high",
+  "diff": ""
+}

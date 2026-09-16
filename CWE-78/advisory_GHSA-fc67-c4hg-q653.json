@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fc67-c4hg-q653",
+  "summary": "Amazon ECS Container Agent (Windows) is vulnerable to Information Disclosure",
+  "severity": "high",
+  "diff": ""
+}

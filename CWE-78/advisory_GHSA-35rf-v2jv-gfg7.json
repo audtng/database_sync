@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-35rf-v2jv-gfg7",
+  "summary": "Privilege escalation to cluster admin on multi-tenant environments",
+  "severity": "high",
+  "diff": ""
+}

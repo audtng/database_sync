@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4xc9-8hmq-j652",
+  "summary": "go-ethereum vulnerable to DoS via malicious p2p message",
+  "severity": "high",
+  "diff": ""
+}

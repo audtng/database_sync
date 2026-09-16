@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6x2m-w449-qwx7",
+  "summary": "Code Injection in CRI-O",
+  "severity": "high",
+  "diff": ""
+}

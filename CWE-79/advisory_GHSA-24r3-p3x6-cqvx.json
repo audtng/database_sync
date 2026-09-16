@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-24r3-p3x6-cqvx",
+  "summary": "Duplicate Advisory: SiYuan Vulnerable to Remote Code Execution via Malicious Bazaar Package — Marketplace XSS",
+  "severity": "critical",
+  "diff": ""
+}

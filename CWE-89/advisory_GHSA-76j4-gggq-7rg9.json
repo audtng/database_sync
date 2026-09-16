@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-76j4-gggq-7rg9",
+  "summary": "SQLinjection in falcon-plus",
+  "severity": "critical",
+  "diff": ""
+}

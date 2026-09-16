@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hgx2-28f8-6g2r",
+  "summary": "Ory Kratos has a SQL injection via forged pagination tokens",
+  "severity": "high",
+  "diff": ""
+}

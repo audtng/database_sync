@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-8gg8-wr4j-v2wr",
+  "summary": "Gophish vulnerable to Denial of Service via crafted payload involving autofocus",
+  "severity": "high",
+  "diff": ""
+}

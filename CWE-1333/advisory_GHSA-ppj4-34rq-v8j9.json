@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ppj4-34rq-v8j9",
+  "summary": "github.com/tidwall/gjson Vulnerable to REDoS attack",
+  "severity": "high",
+  "diff": "diff --git a/go.mod b/go.mod\nindex 85b771d..30ed7f0 100644\n--- a/go.mod\n+++ b/go.mod\n@@ -3,6 +3,6 @@ module github.com/tidwall/gjson\n go 1.12\n \n require (\n-\tgithub.com/tidwall/match v1.0.3\n+\tgithub.com/tidwall/match v1.1.0\n \tgithub.com/tidwall/pretty v1.2.0\n )\ndiff --git a/go.sum b/go.sum\nindex d0afaf4..f4dcaab 100644\n--- a/go.sum\n+++ b/go.sum\n@@ -1,4 +1,4 @@\n-github.com/tidwall/match v1.0.3 h1:FQUVvBImDutD8wJLN6c5eMzWtjgONK9MwIBCOrUJKeE=\n-github.com/tidwall/match v1.0.3/go.mod h1:eRSPERbgtNPcGhD8UCthc6PmLEQXEWd3PRB5JTxsfmM=\n+github.com/tidwall/match v1.1.0 h1:VfI2e2aXLvytih7WUVyO9uvRC+RcXlaTrMbHuQWnFmk=\n+github.com/tidwall/match v1.1.0/go.mod h1:eRSPERbgtNPcGhD8UCthc6PmLEQXEWd3PRB5JTxsfmM=\n github.com/tidwall/pretty v1.2.0 h1:RWIZEg2iJ8/g6fDDYzMpobmaoGh5OLl4AXtGUGPcqCs=\n github.com/tidwall/pretty v1.2.0/go.mod h1:ITEVvHYasfjBbM0u2Pg8T2nJnzm8xPwvNhhsoaGGjNU=\n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-56cv-c5p2-j2wg",
+  "summary": "SiYuan has a Full-Read SSRF via /api/network/forwardProxy",
+  "severity": "high",
+  "diff": ""
+}

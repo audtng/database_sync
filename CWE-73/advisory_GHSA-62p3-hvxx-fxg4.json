@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-62p3-hvxx-fxg4",
+  "summary": "Gotenberg has an ExifTool Dangerous Tag Blocklist Bypass via Group-Prefixed Tag Names that Allows Arbitrary File Rename and Move",
+  "severity": "high",
+  "diff": ""
+}

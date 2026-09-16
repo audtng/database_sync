@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h29v-hj44-q8cv",
+  "summary": "Authorizer: Unvalidated redirect_uri in /authorize leaks OAuth2 tokens to attacker-controlled URL",
+  "severity": "critical",
+  "diff": ""
+}

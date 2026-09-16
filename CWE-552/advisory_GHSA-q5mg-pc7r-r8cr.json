@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q5mg-pc7r-r8cr",
+  "summary": "Files or Directories Accessible to External Parties in ProjectDiscovery",
+  "severity": "critical",
+  "diff": "diff --git a/cmd/interactsh-server/smb_server.py b/cmd/interactsh-server/smb_server.py\nindex 63be50c3..c3c34289 100755\n--- a/cmd/interactsh-server/smb_server.py\n+++ b/cmd/interactsh-server/smb_server.py\n@@ -1,6 +1,11 @@\n import sys\n from impacket import smbserver\n \n+def configure_shares(server):\n+    shares = [\"IPC$\", \"ADMIN$\", \"C$\", \"PRINT$\", \"FAX$\", \"NETLOGON\", \"SYSVOL\"]\n+    for share in shares:\n+        server.removeShare(share)\n+\n log_filename = \"log.txt\"\n if len(sys.argv) \u003e= 2:\n     log_filename = sys.argv[1]\n@@ -10,7 +15,7 @@\n \n server = smbserver.SimpleSMBServer(listenAddress=\"0.0.0.0\", listenPort=port)\n server.setSMB2Support(True)\n-server.addShare(\"interactsh\", \"/interactsh\")\n+configure_shares(server)\n server.setSMBChallenge('')\n server.setLogFile(log_filename)\n server.start()\n"
+}

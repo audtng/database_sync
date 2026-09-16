@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fhgh-wq4q-r37x",
+  "summary": "uniget CLI: Metadata signature verification only runs when UNIGET_IGNORE_METADATA_SIGNATURE is set",
+  "severity": "high",
+  "diff": ""
+}

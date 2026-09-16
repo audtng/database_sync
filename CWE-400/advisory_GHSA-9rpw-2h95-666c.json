@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9rpw-2h95-666c",
+  "summary": "Cloudflare GoFlow vulnerable to a Denial of Service in the sflow packet handling package",
+  "severity": "high",
+  "diff": "diff --git a/decoders/netflowlegacy/netflow.go b/decoders/netflowlegacy/netflow.go\nindex fdeca7b2..79a5744b 100644\n--- a/decoders/netflowlegacy/netflow.go\n+++ b/decoders/netflowlegacy/netflow.go\n@@ -7,6 +7,10 @@ import (\n \t\"github.com/cloudflare/goflow/v3/decoders/utils\"\n )\n \n+const MAX_UDP_PKT_SIZE = 65535\n+const FLOW_SIZE = 48\n+const MAX_FLOWS_PER_PACKET = MAX_UDP_PKT_SIZE / FLOW_SIZE\n+\n type ErrorVersion struct {\n \tversion uint16\n }\n@@ -39,8 +43,12 @@ func DecodeMessage(payload *bytes.Buffer) (interface{}, error) {\n \t\t\t\u0026(packet.SamplingInterval),\n \t\t)\n \n+\t\tif packet.Count \u003e MAX_FLOWS_PER_PACKET {\n+\t\t\treturn nil, fmt.Errorf(\"Invalid amount of flows: %d\", packet.Count)\n+\t\t}\n+\n \t\tpacket.Records = make([]RecordsNetFlowV5, int(packet.Count))\n-\t\tfor i := 0; i \u003c int(packet.Count) \u0026\u0026 payload.Len() \u003e= 48; i++ {\n+\t\tfor i := 0; i \u003c int(packet.Count) \u0026\u0026 payload.Len() \u003e= FLOW_SIZE; i++ {\n \t\t\trecord := RecordsNetFlowV5{}\n \t\t\tutils.BinaryDecoder(payload, \u0026record)\n \t\t\tpacket.Records[i] = record\n"
+}

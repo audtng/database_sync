@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pr34-2v5x-6qjq",
+  "summary": "ZITADEL has 1-Click Account Takeover via XSS in /saml-post Endpoint",
+  "severity": "critical",
+  "diff": ""
+}

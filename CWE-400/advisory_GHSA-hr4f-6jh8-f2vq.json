@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hr4f-6jh8-f2vq",
+  "summary": "OpenFGA DoS vulnerability",
+  "severity": "high",
+  "diff": ""
+}

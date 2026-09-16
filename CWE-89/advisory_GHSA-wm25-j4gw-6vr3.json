@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-wm25-j4gw-6vr3",
+  "summary": "pREST vulnerable to jwt bypass + sql injection",
+  "severity": "critical",
+  "diff": "diff --git a/config/config.go b/config/config.go\nindex b1c7398d8..7eba52c07 100644\n--- a/config/config.go\n+++ b/config/config.go\n@@ -182,7 +182,7 @@ func viperCfg() {\n \tviper.SetDefault(\"jwt.algo\", \"HS256\")\n \tviper.SetDefault(\"jwt.wellknownurl\", \"\")\n \tviper.SetDefault(\"jwt.jwks\", \"\")\n-\tviper.SetDefault(\"jwt.whitelist\", []string{\"/auth\"})\n+\tviper.SetDefault(\"jwt.whitelist\", []string{\"^/auth\"})\n \n \tviper.SetDefault(\"json.agg.type\", \"jsonb_agg\")\n \n"
+}

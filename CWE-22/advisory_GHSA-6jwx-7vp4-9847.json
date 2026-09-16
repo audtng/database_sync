@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6jwx-7vp4-9847",
+  "summary": "Traefik has an StripPrefixRegex Middleware Authorization Bypass via Path/RawPath Desync",
+  "severity": "high",
+  "diff": ""
+}

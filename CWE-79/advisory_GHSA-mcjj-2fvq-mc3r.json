@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mcjj-2fvq-mc3r",
+  "summary": "Gogs vulnerable to Cross-site Scripting",
+  "severity": "critical",
+  "diff": ""
+}

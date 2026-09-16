@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7xqm-7738-642x",
+  "summary": "File Browser's Uncontrolled Memory Consumption vulnerability can enable DoS attack due to oversized file processing",
+  "severity": "high",
+  "diff": ""
+}

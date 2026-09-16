@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-rw8p-c6hf-q3pg",
+  "summary": "PinchTab has SSRF with Full Response Exfiltration via Download Handler",
+  "severity": "high",
+  "diff": ""
+}

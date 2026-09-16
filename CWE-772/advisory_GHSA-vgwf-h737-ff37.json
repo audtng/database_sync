@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vgwf-h737-ff37",
+  "summary": "golang.org/x/crypto: Invoking client can cause server deadlock on unexpected responses",
+  "severity": "critical",
+  "diff": ""
+}

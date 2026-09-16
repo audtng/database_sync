@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7hm9-v7vf-7g4w",
+  "summary": "SiYuan: Path Traversal via unvalidated avID in RenderAttributeView/AV read endpoints : reader-reachable cross-scope attribute-view disclosure",
+  "severity": "high",
+  "diff": ""
+}

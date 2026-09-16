@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-3c22-5j5m-4jq7",
+  "summary": "Gokapi has Stored XSS in SVG Hotlinks",
+  "severity": "high",
+  "diff": ""
+}

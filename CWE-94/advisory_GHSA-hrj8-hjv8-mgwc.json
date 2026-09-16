@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hrj8-hjv8-mgwc",
+  "summary": "Anyquery: AppleScript/JXA Code Injection via Unescaped URL in macOS Chrome Plugin",
+  "severity": "critical",
+  "diff": ""
+}

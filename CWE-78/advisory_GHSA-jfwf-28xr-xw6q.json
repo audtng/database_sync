@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jfwf-28xr-xw6q",
+  "summary": "RClone: Unauthenticated operations/fsinfo allows attacker-controlled backend instantiation and local command execution",
+  "severity": "critical",
+  "diff": "diff --git a/fs/operations/rc.go b/fs/operations/rc.go\nindex ce92a0024f2..cb2eb4fe417 100644\n--- a/fs/operations/rc.go\n+++ b/fs/operations/rc.go\n@@ -430,9 +430,10 @@ func rcPublicLink(ctx context.Context, in rc.Params) (out rc.Params, err error)\n \n func init() {\n \trc.Add(rc.Call{\n-\t\tPath:  \"operations/fsinfo\",\n-\t\tFn:    rcFsInfo,\n-\t\tTitle: \"Return information about the remote\",\n+\t\tPath:         \"operations/fsinfo\",\n+\t\tAuthRequired: true,\n+\t\tFn:           rcFsInfo,\n+\t\tTitle:        \"Return information about the remote\",\n \t\tHelp: `This takes the following parameters:\n \n - fs - a remote name string e.g. \"drive:\"\n"
+}

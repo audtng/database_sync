@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-hr5w-cwwq-2v4m",
+  "summary": "ZITADEL's Improper Content-Type Validation Leads to Account Takeover via Stored XSS + CSP Bypass",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-95f9-94vc-665h",
+  "summary": "Path Traversal in Beego",
+  "severity": "critical",
+  "diff": "diff --git a/tree.go b/tree.go\nindex 72f9373c79..28b515fffe 100644\n--- a/tree.go\n+++ b/tree.go\n@@ -284,6 +284,8 @@ func (t *Tree) addseg(segments []string, route interface{}, wildcards []string,\n \n // Match router to runObject \u0026 params\n func (t *Tree) Match(pattern string, ctx *context.Context) (runObject interface{}) {\n+        // fix issue 4961, deal with \"./ ../ //\"\n+        pattern = path.Clean(pattern)\n \tif len(pattern) == 0 || pattern[0] != '/' {\n \t\treturn nil\n \t}\n"
+}

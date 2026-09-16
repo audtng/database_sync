@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jc7g-x28f-3v3h",
+  "summary": "listmonk's Sprig template Injection vulnerability leads to reading of Environment Variable for low privilege user",
+  "severity": "critical",
+  "diff": "diff --git a/cmd/init.go b/cmd/init.go\nindex be2edbffa..65a762284 100644\n--- a/cmd/init.go\n+++ b/cmd/init.go\n@@ -988,7 +988,11 @@ func initTplFuncs(i *i18n.I18n, u *UrlConfig) template.FuncMap {\n \t}\n \n \t// Copy spring functions.\n-\tmaps.Copy(funcs, sprig.GenericFuncMap())\n+\tsprigFuncs := sprig.GenericFuncMap()\n+\tdelete(sprigFuncs, \"env\")\n+\tdelete(sprigFuncs, \"expandenv\")\n+\n+\tmaps.Copy(funcs, sprigFuncs)\n \n \treturn funcs\n }\ndiff --git a/internal/manager/manager.go b/internal/manager/manager.go\nindex 588c7f59b..314454b61 100644\n--- a/internal/manager/manager.go\n+++ b/internal/manager/manager.go\n@@ -621,7 +621,11 @@ func (m *Manager) makeGnericFuncMap() template.FuncMap {\n \t}\n \n \t// Copy spring functions.\n-\tmaps.Copy(funcs, sprig.GenericFuncMap())\n+\tsprigFuncs := sprig.GenericFuncMap()\n+\tdelete(sprigFuncs, \"env\")\n+\tdelete(sprigFuncs, \"expandenv\")\n+\n+\tmaps.Copy(funcs, sprigFuncs)\n \n \treturn funcs\n }\n"
+}

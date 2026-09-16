@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q3j6-22wf-3jh9",
+  "summary": "github.com/ipfs/go-bitswap vulnerable to DOS unbounded persistent memory leak",
+  "severity": "high",
+  "diff": ""
+}

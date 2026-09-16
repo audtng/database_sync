@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xc79-566c-j4qx",
+  "summary": "Parallax is vulnerable to DoS via malicious p2p message",
+  "severity": "high",
+  "diff": "diff --git a/core/rawdb/accessors_chain.go b/core/rawdb/accessors_chain.go\nindex 5a5c659f..65670a09 100644\n--- a/core/rawdb/accessors_chain.go\n+++ b/core/rawdb/accessors_chain.go\n@@ -333,9 +333,8 @@ func ReadHeaderRange(db prldb.Reader, number uint64, count uint64) []rlp.RawValu\n \tif count == 0 {\n \t\treturn rlpHeaders\n \t}\n-\t// read remaining from ancients\n-\tmax := count * 700\n-\tdata, err := db.AncientRange(freezerHeaderTable, i+1-count, count, max)\n+\t// read remaining from ancients, cap at 2M\n+\tdata, err := db.AncientRange(freezerHeaderTable, i+1-count, count, 2*1024*1024)\n \tif err == nil \u0026\u0026 uint64(len(data)) == count {\n \t\t// the data is on the order [h, h+1, .., n] -- reordering needed\n \t\tfor i := range data {\n"
+}

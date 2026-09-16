@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-9fw6-xgg2-mq9q",
+  "summary": "Hysteria: A specially constructed quic package can crash the server OOM when the sniff is enabled",
+  "severity": "high",
+  "diff": ""
+}

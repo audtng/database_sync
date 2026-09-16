@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p45j-vfv5-wprq",
+  "summary": "RKE2 supervisor port is vulnerable to unauthenticated remote denial-of-service (DoS) attack via TLS SAN stuffing attack",
+  "severity": "high",
+  "diff": ""
+}

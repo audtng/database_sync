@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xrcf-6jh3-ggvx",
+  "summary": "Anyquery: Arbitrary File Write (AFW) which could lead to Remote Code Execution (RCE) via Unrestricted ATTACH DATABASE in Server Mode",
+  "severity": "critical",
+  "diff": ""
+}

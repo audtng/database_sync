@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-73hr-m85f-64v9",
+  "summary": "Incus has an arbitrary file write on host via `exec-output` symlink in crafted image",
+  "severity": "critical",
+  "diff": ""
+}

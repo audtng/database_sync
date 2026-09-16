@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4g5x-hcwm-82jw",
+  "summary": "Goploy: Arbitrary File Read via Path Traversal in /deploy/fileDiff allows Remote Server Compromise",
+  "severity": "high",
+  "diff": ""
+}

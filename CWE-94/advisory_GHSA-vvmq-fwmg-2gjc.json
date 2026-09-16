@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vvmq-fwmg-2gjc",
+  "summary": "Improper kubeconfig validation allows arbitrary code execution",
+  "severity": "critical",
+  "diff": ""
+}

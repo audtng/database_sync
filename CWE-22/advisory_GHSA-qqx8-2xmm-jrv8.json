@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-qqx8-2xmm-jrv8",
+  "summary": "ACME Lego: Arbitrary File Write via Path Traversal in Webroot HTTP-01 Provider",
+  "severity": "high",
+  "diff": ""
+}

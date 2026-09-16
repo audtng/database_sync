@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fmwg-qcqh-m992",
+  "summary": "Gotenberg Vulnerable to ReDoS via extraHttpHeaders scope feature",
+  "severity": "high",
+  "diff": "diff --git a/pkg/modules/chromium/routes.go b/pkg/modules/chromium/routes.go\nindex c0ee90c8..eb8afb84 100644\n--- a/pkg/modules/chromium/routes.go\n+++ b/pkg/modules/chromium/routes.go\n@@ -202,6 +202,7 @@ func FormDataChromiumOptions(ctx *api.Context) (*api.FormData, Options) {\n \t\t\t\t\t\terr = errors.Join(err, fmt.Errorf(\"invalid scope regex pattern for header '%s': %w\", k, errCompile))\n \t\t\t\t\t\tcontinue\n \t\t\t\t\t}\n+\t\t\t\t\tp.MatchTimeout = 5 * time.Second\n \t\t\t\t\tscopeRegexp = p\n \t\t\t\t}\n \n"
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xw98-5q62-jx94",
+  "summary": "Traefik: tcp router clears read deadlines before tls forwarding, enabling stalled handshakes (Slowloris DOS)",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v9mp-j8g7-2q6m",
+  "summary": "Paranoidhttp Server-Side Request Forgery vulnerability",
+  "severity": "high",
+  "diff": "diff --git a/client.go b/client.go\nindex 4f80444..5b65321 100644\n--- a/client.go\n+++ b/client.go\n@@ -121,7 +121,7 @@ func safeAddr(ctx context.Context, resolver *net.Resolver, hostport string, opts\n \n \tip := net.ParseIP(host)\n \tif ip != nil {\n-\t\tif ip.To4() != nil \u0026\u0026 c.isIPForbidden(ip) {\n+\t\tif ip.IsUnspecified() || (ip.To4() != nil \u0026\u0026 c.isIPForbidden(ip)) {\n \t\t\treturn \"\", fmt.Errorf(\"bad ip is detected: %v\", ip)\n \t\t}\n \t\treturn net.JoinHostPort(ip.String(), port), nil\ndiff --git a/client_test.go b/client_test.go\nindex 7282dd6..a7ce139 100644\n--- a/client_test.go\n+++ b/client_test.go\n@@ -19,6 +19,10 @@ func TestRequest(t *testing.T) {\n \tif _, err := DefaultClient.Get(\"http://192.168.0.1\"); err == nil {\n \t\tt.Errorf(\"The request for localhost should be fail\")\n \t}\n+\n+\tif _, err := DefaultClient.Get(\"http://[::]\"); err == nil {\n+\t\tt.Errorf(\"The request for IPv6 unspecified address should be fail\")\n+\t}\n }\n \n func TestIsHostForbidden(t *testing.T) {\n"
+}

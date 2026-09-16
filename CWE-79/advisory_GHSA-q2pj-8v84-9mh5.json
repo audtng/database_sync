@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-q2pj-8v84-9mh5",
+  "summary": "Arcane Backend: Unauthenticated reflected XSS via SVG color parameter enables admin account takeover",
+  "severity": "high",
+  "diff": ""
+}

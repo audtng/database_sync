@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-c656-jcx2-7pqj",
+  "summary": "zrok copy writes attacker-controlled WebDAV paths outside the destination root",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-mx64-mj3q-7prj",
+  "summary": "iskorotkov/avro: Denial-of-Service Vulnerability in Decoder",
+  "severity": "high",
+  "diff": ""
+}

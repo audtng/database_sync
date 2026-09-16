@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fccc-8m69-8r78",
+  "summary": "Ollama Allocation of Resources Without Limits or Throttling vulnerability",
+  "severity": "high",
+  "diff": ""
+}

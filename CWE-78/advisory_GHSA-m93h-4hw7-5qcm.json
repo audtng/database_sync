@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-m93h-4hw7-5qcm",
+  "summary": "File Browser: Command Injection via Authentication Hook Shell Substitution (Pre-Authentication RCE)",
+  "severity": "critical",
+  "diff": ""
+}

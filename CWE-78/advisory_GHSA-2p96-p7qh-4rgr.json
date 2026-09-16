@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2p96-p7qh-4rgr",
+  "summary": "Plenti arbitrary file write vulnerability",
+  "severity": "high",
+  "diff": ""
+}

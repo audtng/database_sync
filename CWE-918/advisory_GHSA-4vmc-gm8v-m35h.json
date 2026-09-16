@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4vmc-gm8v-m35h",
+  "summary": "Gotenberg vulnerable to unauthenticated SSRF via default deny-list bypass in downloadFrom and webhook",
+  "severity": "critical",
+  "diff": ""
+}

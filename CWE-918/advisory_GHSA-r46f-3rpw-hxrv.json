@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-r46f-3rpw-hxrv",
+  "summary": "Hugo: security.http.urls deny rules bypassed by alternate IPv4 encodings (SSRF)",
+  "severity": "high",
+  "diff": ""
+}

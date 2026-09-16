@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h98r-wv3h-fr38",
+  "summary": "Argo CD: Stored XSS in application link annotations enables developer-to-admin privilege escalation",
+  "severity": "high",
+  "diff": ""
+}

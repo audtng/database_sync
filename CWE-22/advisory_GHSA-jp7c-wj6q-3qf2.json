@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jp7c-wj6q-3qf2",
+  "summary": "Gogs vulnerable to arbitrary file deletion via Path Traversal in wiki page update",
+  "severity": "high",
+  "diff": ""
+}

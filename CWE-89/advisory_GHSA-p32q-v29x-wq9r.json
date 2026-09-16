@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-p32q-v29x-wq9r",
+  "summary": "Focalboard doesn't sanitize category IDs before incorporating them into dynamic SQL statements",
+  "severity": "high",
+  "diff": ""
+}

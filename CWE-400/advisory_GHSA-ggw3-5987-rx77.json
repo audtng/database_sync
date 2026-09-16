@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-ggw3-5987-rx77",
+  "summary": "Pomerium Pre-Auth Memory Exhaustion via Unbounded zstd Decompression in HPKE Callback",
+  "severity": "high",
+  "diff": "diff --git a/pkg/hpke/url.go b/pkg/hpke/url.go\nindex 147ae65eed0..e85704d25cc 100644\n--- a/pkg/hpke/url.go\n+++ b/pkg/hpke/url.go\n@@ -166,6 +166,7 @@ func decodeQueryStringV1(raw []byte) (url.Values, error) {\n \n var zstdDecoder, _ = zstd.NewReader(nil,\n \tzstd.WithDecoderLowmem(true),\n+\tzstd.WithDecoderMaxMemory(4*1024*1024),\n )\n \n func decodeQueryStringV2(raw []byte) (url.Values, error) {\ndiff --git a/pkg/hpke/url_test.go b/pkg/hpke/url_test.go\nindex 8f14016c2d9..e9476f18a03 100644\n--- a/pkg/hpke/url_test.go\n+++ b/pkg/hpke/url_test.go\n@@ -76,6 +76,18 @@ func TestEncryptURLValues(t *testing.T) {\n \n \t\tassert.Less(t, len(encrypted.Encode()), 1024)\n \t})\n+\n+\tt.Run(\"max size\", func(t *testing.T) {\n+\t\tt.Parallel()\n+\n+\t\tencrypted, err := EncryptURLValuesV2(k1, k2.PublicKey(), url.Values{\n+\t\t\t\"a\": {strings.Repeat(\"b\", 4*1024*1024)},\n+\t\t})\n+\t\trequire.NoError(t, err)\n+\n+\t\t_, _, err = DecryptURLValues(k2, encrypted)\n+\t\tassert.ErrorContains(t, err, \"decompressed size exceeds configured limit\")\n+\t})\n }\n \n func BenchmarkZSTD(b *testing.B) {\n"
+}

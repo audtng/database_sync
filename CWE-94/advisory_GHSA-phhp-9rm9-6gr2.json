@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-phhp-9rm9-6gr2",
+  "summary": "SiYuan: Remote Code Execution in the Electron desktop client via stored XSS in synced table captions",
+  "severity": "critical",
+  "diff": ""
+}

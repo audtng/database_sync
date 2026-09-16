@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-x4mj-7f9g-29h4",
+  "summary": "Contour has Lua code injection via Cookie Path Rewrite Policy",
+  "severity": "high",
+  "diff": ""
+}

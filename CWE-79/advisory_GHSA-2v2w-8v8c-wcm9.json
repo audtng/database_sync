@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2v2w-8v8c-wcm9",
+  "summary": "Rancher UI has Stored Cross-site Scripting vulnerability",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2wpx-qpw2-g5h5",
+  "summary": "CoreDNS' DoQ worker pool does not bound stream backlog",
+  "severity": "high",
+  "diff": ""
+}

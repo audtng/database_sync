@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jqc5-2p7q-fqfc",
+  "summary": "Hysteria: http large header with sniff cause server DoS",
+  "severity": "high",
+  "diff": ""
+}

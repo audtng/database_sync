@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4pvg-prr3-9cxr",
+  "summary": "Nginx-UI is Vulnerable to Unauthenticated Remote Code Execution via Backup Restore",
+  "severity": "critical",
+  "diff": ""
+}

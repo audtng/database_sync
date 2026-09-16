@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xjvp-7243-rg9h",
+  "summary": "Wish has SCP Path Traversal that allows arbitrary file read/write",
+  "severity": "critical",
+  "diff": ""
+}

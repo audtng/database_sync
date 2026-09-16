@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-v464-r2r9-www7",
+  "summary": "Ollama Vulnerable to Denial of Service (DoS) via Crafted GZIP",
+  "severity": "high",
+  "diff": ""
+}

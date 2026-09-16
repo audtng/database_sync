@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-w95v-4h65-j455",
+  "summary": "SiYuan Affected by Zero-Click NTLM Hash Theft and Blind SSRF via Mermaid Diagram Rendering",
+  "severity": "high",
+  "diff": ""
+}

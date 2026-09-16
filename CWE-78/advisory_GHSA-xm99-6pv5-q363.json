@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-xm99-6pv5-q363",
+  "summary": "Disputed: OS Command injection in github.com/kardianos/service",
+  "severity": "high",
+  "diff": "diff --git a/service_windows.go b/service_windows.go\nindex 9e930f6d..8d5592e6 100644\n--- a/service_windows.go\n+++ b/service_windows.go\n@@ -227,6 +227,8 @@ func (ws *windowsService) Install() error {\n \tif err != nil {\n \t\treturn err\n \t}\n+\t// add quotes to the path in order to avoid \"unquoted search path\" issue\n+\texepath = `\"`+exepath+`\"`\n \n \tm, err := mgr.Connect()\n \tif err != nil {\n"
+}

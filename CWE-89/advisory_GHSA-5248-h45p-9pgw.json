@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-5248-h45p-9pgw",
+  "summary": "SQL Injection in the KubeClarity REST API",
+  "severity": "high",
+  "diff": "diff --git a/backend/pkg/database/id_view.go b/backend/pkg/database/id_view.go\nindex fa7dbc7..e71274d 100644\n--- a/backend/pkg/database/id_view.go\n+++ b/backend/pkg/database/id_view.go\n@@ -76,8 +76,8 @@ func (i *IDsViewHandler) GetIDs(params GetIDsParams, idsShouldMatch bool) ([]str\n \tif idsShouldMatch {\n \t\tfor _, id := range params.FilterIDs {\n \t\t\t// for each OR filter we need to verify that lookup id column is not null to avoid failing during Find\n-\t\t\ttx.Or(fmt.Sprintf(\"%s = '%s' AND %s is not null\", filterIDColumnName, id,\n-\t\t\t\tlookupIDColumnName))\n+\t\t\ttx.Or(\"? = ? AND ? is not null\", filterIDColumnName, id,\n+\t\t\t\tlookupIDColumnName)\n \t\t}\n \t} else {\n \t\tfor _, id := range params.FilterIDs {\n"
+}

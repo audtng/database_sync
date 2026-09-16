@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-95cv-r8x4-vh75",
+  "summary": "OpenList: Authenticated users can rename files outside their base path via batch rename `src_name` traversal",
+  "severity": "high",
+  "diff": "diff --git a/server/handles/fsbatch.go b/server/handles/fsbatch.go\nindex e672165cd8..e0f98284a3 100644\n--- a/server/handles/fsbatch.go\n+++ b/server/handles/fsbatch.go\n@@ -188,6 +188,11 @@ func FsBatchRename(c *gin.Context) {\n \t\tif renameObject.SrcName == \"\" || renameObject.NewName == \"\" {\n \t\t\tcontinue\n \t\t}\n+\t\terr = checkRelativePath(renameObject.SrcName)\n+\t\tif err != nil {\n+\t\t\tcommon.ErrorResp(c, err, 403)\n+\t\t\treturn\n+\t\t}\n \t\terr = checkRelativePath(renameObject.NewName)\n \t\tif err != nil {\n \t\t\tcommon.ErrorResp(c, err, 403)\n"
+}

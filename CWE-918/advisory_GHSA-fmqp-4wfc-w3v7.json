@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-fmqp-4wfc-w3v7",
+  "summary": "Kyverno APICall SSRF Vulnerability Leading to Multi-Tenant Isolation Breach",
+  "severity": "high",
+  "diff": ""
+}

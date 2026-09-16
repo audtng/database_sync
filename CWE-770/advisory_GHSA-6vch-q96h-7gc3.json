@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-6vch-q96h-7gc3",
+  "summary": "etcd: `tlsListener.acceptLoop` spawns unbounded handshake goroutines with no deadline",
+  "severity": "high",
+  "diff": "diff --git a/client/pkg/transport/listener_tls.go b/client/pkg/transport/listener_tls.go\nindex 63566e1f642..89ba0c76595 100644\n--- a/client/pkg/transport/listener_tls.go\n+++ b/client/pkg/transport/listener_tls.go\n@@ -23,6 +23,12 @@ import (\n \t\"os\"\n \t\"strings\"\n \t\"sync\"\n+\t\"time\"\n+)\n+\n+const (\n+\t// tlsHandshakeTimeout bounds how long a single TLS handshake may block.\n+\ttlsHandshakeTimeout = 10 * time.Second\n )\n \n // tlsListener overrides a TLS listener so it will reject client\n@@ -143,6 +149,7 @@ func (l *tlsListener) acceptLoop() {\n \t\t\t}()\n \n \t\t\ttlsConn := conn.(*tls.Conn)\n+\t\t\t_ = tlsConn.SetDeadline(time.Now().Add(tlsHandshakeTimeout))\n \t\t\therr := tlsConn.Handshake()\n \t\t\tpendingMu.Lock()\n \t\t\tdelete(pending, conn)\n@@ -152,6 +159,7 @@ func (l *tlsListener) acceptLoop() {\n \t\t\t\tl.handshakeFailure(tlsConn, herr)\n \t\t\t\treturn\n \t\t\t}\n+\t\t\t_ = tlsConn.SetDeadline(time.Time{})\n \t\t\tif err := l.check(ctx, tlsConn); err != nil {\n \t\t\t\tl.handshakeFailure(tlsConn, err)\n \t\t\t\treturn\n"
+}

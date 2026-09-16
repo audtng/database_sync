@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-56mp-4f3v-fgj2",
+  "summary": "SiYuan: Stored XSS to RCE via Unsanitized Attribute View Asset Cell Content",
+  "severity": "critical",
+  "diff": ""
+}

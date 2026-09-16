@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-vgrc-hq28-p3xp",
+  "summary": "Hysteria has an authenticated UDP ACL bypass that enables localhost and private-network UDP SSRF",
+  "severity": "high",
+  "diff": ""
+}

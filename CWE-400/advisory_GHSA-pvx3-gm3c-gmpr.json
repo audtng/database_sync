@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pvx3-gm3c-gmpr",
+  "summary": "Denial of Service in Go-Ethereum",
+  "severity": "high",
+  "diff": ""
+}

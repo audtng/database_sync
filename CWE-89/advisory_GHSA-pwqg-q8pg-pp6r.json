@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-pwqg-q8pg-pp6r",
+  "summary": "Daptin fuzzy search injects unvalidated column name into raw SQL",
+  "severity": "high",
+  "diff": ""
+}

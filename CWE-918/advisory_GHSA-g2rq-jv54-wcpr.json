@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-g2rq-jv54-wcpr",
+  "summary": "Dragonfly vulnerable to server-side request forgery",
+  "severity": "high",
+  "diff": ""
+}

@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7f67-crqm-jgh7",
+  "summary": "Incus container image templating arbitrary host file read and write",
+  "severity": "high",
+  "diff": ""
+}

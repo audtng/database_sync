@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-h69g-9hx6-f3v4",
+  "summary": "Excelize: Unbounded Row Index Allocation in Worksheet Parser (checkSheet OOM/Panic DoS)",
+  "severity": "high",
+  "diff": ""
+}

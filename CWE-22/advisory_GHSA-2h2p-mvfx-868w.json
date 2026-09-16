@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-2h2p-mvfx-868w",
+  "summary": "SiYuan Vulnerable to Path Traversal in /export Endpoint Allows Arbitrary File Read and Secret Leakage",
+  "severity": "critical",
+  "diff": ""
+}
