@@ -14,8 +14,11 @@ fi
 mkdir -p "$DEST_DIR"
 touch "$TRACKING_FILE"
 
-# Find all files and process them one by one
-find "$SOURCE_DIR" -type f | while read -r src_file; do
+# Track if any new files were copied during this run
+copied_any=false
+
+# Find all files and process them one by one (handles spaces safely)
+find "$SOURCE_DIR" -type f -print0 | while IFS= read -r -d '' src_file; do
     
     # Calculate unique SHA-256 hash of the file
     file_hash=$(sha256sum "$src_file" | awk '{print $1}')
@@ -37,9 +40,7 @@ find "$SOURCE_DIR" -type f | while read -r src_file; do
             echo "Successfully Copied: $rel_path"
             # Log the hash and file path to the database
             echo "$file_hash:$rel_path" >> "$TRACKING_FILE"
-            
-            echo "One file copied. Exiting script."
-            exit 0 # CRITICAL: This breaks the loop and exits the entire script successfully
+            copied_any=true
         else
             echo "Error: Failed to copy $rel_path"
             exit 1 # Exit with an error if the copy fails
@@ -47,5 +48,7 @@ find "$SOURCE_DIR" -type f | while read -r src_file; do
     fi
 done
 
-# If the loop finishes without hitting 'exit 0', it means no new files were found
-echo "All files are already up to date. No files to copy."
+# Check if anything was processed
+if [ "$copied_any" = false ]; then
+    echo "All files are already up to date. No files to copy."
+fi
