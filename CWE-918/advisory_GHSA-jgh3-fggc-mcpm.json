@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-jgh3-fggc-mcpm",
+  "summary": "Obot: Server-Side Request Forgery via remote MCP server URL",
+  "severity": "high",
+  "diff": ""
+}
