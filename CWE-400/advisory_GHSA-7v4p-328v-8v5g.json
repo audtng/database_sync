@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-7v4p-328v-8v5g",
+  "summary": "Traefik vulnerable to HTTP/2 request causing denial of service ",
+  "severity": "high",
+  "diff": ""
+}
