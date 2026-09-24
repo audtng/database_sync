@@ -1,0 +1,6 @@
+{
+  "ghsa_id": "GHSA-4fwh-wrm6-97xm",
+  "summary": "Klever-Go: Unauthenticated WebSocket /subscribe: no read-size limit, no connection cap, permissive origin -\u003e remote node memory/goroutine exhaustion (DoS)",
+  "severity": "high",
+  "diff": ""
+}
