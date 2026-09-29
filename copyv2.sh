@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuration
-SOURCE_DIR="./CWE-22"
-DEST_DIR="../rulegen/combined_output"
+SOURCE_DIR="./CWE-287"
+DEST_DIR="../rulegen/CWE-287"
 TRACKING_FILE="$DEST_DIR/.copied_files_db.txt"
 
 # Ensure directories exist
